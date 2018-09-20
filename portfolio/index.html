@@ -27,6 +27,17 @@
 <!-- compress version
 <script type="text/javascript" src="js/elastic_grid.min.js"></script>
 -->
+<style>
+.og-grid li>a, .og-grid li>a img {
+    border: 0;
+    outline: 0;
+    display: block;
+    position: relative;
+    width: 300px;
+    height: 300px;
+}
+</style>
+
 <script type="text/javascript">
     $(function(){
         $("#elastic_grid_demo").elastic_grid({
@@ -41,9 +52,9 @@
             [
                 {
                     'title'         : 'Jornal Popular Mais',
-                    'description'   : 'Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage.',
-                    'thumbnail'     : ['images/small/1.jpg', 'images/small/2.jpg', 'images/small/3.jpg', 'images/small/10.jpg', 'images/small/11.jpg'],
-                    'large'         : ['https://youtu.be/-6Xl9tBWt54', 'images/large/2.jpg', 'images/large/3.jpg', 'images/large/10.jpg', 'images/large/11.jpg'],
+                    'description'   : 'Site desenvolvido para o Jornal Popular Mais, com noticias diarias feito em wordpress',
+                    'thumbnail'     : ['./../img/portfolio/thumbnail/popularmais.png'],
+                    'large'         : ['./../img/portfolio/thumbnail/popularmais.png'],
                     'img_title'     : ['jquery elastic grid 1 ', 'jquery elastic grid 2', 'jquery elastic grid 3', 'jquery elastic grid 4', 'jquery elastic grid 5'],
                     'button_list'   :
                     [
