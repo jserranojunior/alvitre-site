@@ -12,6 +12,10 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
         crossorigin="anonymous">
     <link rel="shortcut icon" href="./img/alvitre.png">
+
+    <link rel="stylesheet" href="./css/style.css">
+
+    <link rel="stylesheet" href="https://bootswatch.com/4/yeti/bootstrap.min.css">
     <title>Alvitre</title>
 </head>
 
@@ -22,7 +26,7 @@
 
         <div class="row ">
             <div class="col">
-                <nav class="navbar navbar-expand-lg navbar-light">
+                <nav class="navbar shadow-sm navbar-expand-lg navbar-light">
                     <a class="navbar-brand" href="#"><img class="img-fluid logo" src="./img/alvitre.png" alt="">LVITRE</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -31,17 +35,24 @@
 
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav mr-auto">
-                            
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#portfolio">PORTFÓLIO</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#programador">PROGRAMADOR</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#servicos">SERVIÇOS</a>
+                            </li>
                         </ul>
                     </div>
 
                     <form class="form-inline">
                         <a href="#">
-                            <div class="btn btn-success">
-                                <span>
-                                    <i class="fab fa-whatsapp"></i>
-                                </span>
-                            </div>
+                            <h2 class="text-success">
+                                <i class="fab fa-whatsapp"></i>
+                            </h2>
+
 
 
 
@@ -54,20 +65,94 @@
             </div>
         </div>
 
-        <div class="row">
+        <section id="portfolio">
+            <div class="row row-space">
 
-            <div class="col text-center">
-                <h3>ALGUNS TRABALHOS</h3>
-                <p>Agradecemos a todos os nossos clientes, por confiar e acreditar em nosso trabalho.</p>
+                <div class="col text-center">
+                    <h3>PORTFÓLIO</h3>
+                    <p>Agradecemos a todos os nossos clientes, por confiar e acreditar em nosso trabalho.</p>
+                </div>
             </div>
-        </div>
-        <div class="row float-center text-center">
-            <div class="col-3">foto</div>
-            <div class="col-3">foto</div>
-            <div class="col-3">foto</div>
-            <div class="col-3">foto</div>
+            <div class="row float-center text-center">
 
-        </div>
+                <div class="col float-center text-center">
+                    <div class="card-deck">
+                        <div class="card">
+                            <div class="card-body">
+                                <img class="card-img-top" src="http://alvitre.net/imagens/mini_Popular-Mais-A-not%C3%ADcia-como-ela-%C3%A9--480x480.png"
+                                    alt="">
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <img class="card-img-top" src="http://alvitre.net/imagens/mini_Popular-Mais-A-not%C3%ADcia-como-ela-%C3%A9--480x480.png"
+                                    alt="">
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <img class="card-img-top" src="http://alvitre.net/imagens/mini_Popular-Mais-A-not%C3%ADcia-como-ela-%C3%A9--480x480.png"
+                                    alt="">
+                            </div>
+                            <div class="card-footer">
+                                <small class="text-muted">Popular Mais</small>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <img class="card-img-top" src="http://alvitre.net/imagens/mini_Popular-Mais-A-not%C3%ADcia-como-ela-%C3%A9--480x480.png"
+                                    alt="">
+                            </div>
+                            <div class="card-footer">
+                                <small class="text-muted">Popular Mais</small>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <img class="card-img-top" src="http://alvitre.net/imagens/mini_Popular-Mais-A-not%C3%ADcia-como-ela-%C3%A9--480x480.png"
+                                    alt="">
+                            </div>
+                            <div class="card-footer">
+                                <small class="text-muted">Popular Mais</small>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+            </div>
+           <div class="row row-btn-portfolio">
+                <div class="col text-center">
+                       <div class="btn btn-outline-info">VER PORTFOLIO COMPLETO <span ><i class="fas fa-angle-down"></i></span>
+                        </div>
+                    </div>
+           </div>
+        </section>
+
+        <section class="" id="servicos">
+                <div class="row row-space">
+                    <div class="col text-center">
+                        <h3>SERVIÇOS</h3>
+                        <p>O que oferecemos</p>
+                    </div>
+                </div>
+            </section>
+
+        <section class="" id="programador">
+            <div class="row row-space">
+                <div class="col text-center">
+                    <h3>O PROGRAMADOR</h3>
+                    <p>Jorge Serrano Junior</p>
+                </div>
+            </div>
+        </section>
+
+       
+
+
+
 
     </div>
 
