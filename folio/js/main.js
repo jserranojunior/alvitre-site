@@ -53,7 +53,7 @@ $(document).ready(function() {
 
   $(window).scroll(function() {
     var scroll = $(window).scrollTop();
-    if (scroll > 200 ) {
+    if (scroll > 0 ) {
       $("#main-nav, #main-nav-subpage").slideDown(700);
       $("#main-nav-subpage").removeClass('subpage-nav');
     } else {
@@ -79,7 +79,7 @@ $(document).ready(function() {
 
   $(function() {
     typed.typed({
-      strings: ["Sistemas.", "Sites.", "Design.", "App"],
+      strings: ["Sistemas.", "Sites.", "Design.", "App."],
       typeSpeed: 100,
       loop: true,
     });
