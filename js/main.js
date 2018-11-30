@@ -78,7 +78,7 @@ $(document).ready(function() {
 
   $(function() {
     typed.typed({
-      strings: ["Sistemas.", "Sites.", "Design.", "App."],
+      strings: ["Sistemas.", "Sites.", "App."],
       typeSpeed: 100,
       loop: true,
     });
