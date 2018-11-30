@@ -1,6 +1,4 @@
-Thanks for downloading this theme!
+Site institucional empresa Alvitre
+Site: https://jserranojunior.github.io/alvitre-site/
+Autor: jserranojunior
 
-Theme Name: Folio
-Theme URL: https://bootstrapmade.com/folio-bootstrap-portfolio-template/
-Author: BootstrapMade.com
-Author URL: https://bootstrapmade.com
