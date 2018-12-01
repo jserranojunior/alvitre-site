@@ -169,9 +169,9 @@ $isMobile = isMobile();
 
 $(document).ready(function(){
     if($isMobile == true){  
-     $(".link-whatsapp").attr("href", "whatsapp://send?phone=5511972182492");         
+     $(".link-whatsapp").attr("href", "whatsapp://send?phone=5511946439695");         
     }else{
-     $(".link-whatsapp").attr("href", "https://web.whatsapp.com/send?phone=5511972182492"); 
+     $(".link-whatsapp").attr("href", "https://web.whatsapp.com/send?phone=5511946439695"); 
     }
     });
 // WHATSAPP
