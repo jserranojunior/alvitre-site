@@ -84,10 +84,7 @@
 /* EFEITO FLIP      */
 
 #header {
-        background: url("https://image.freepik.com/fotos-gratis/ceu-do-espaco-3d-abstrato_1048-10321.jpg") repeat scroll center center / cover;
-
-    /* background: url("http://alvitre.net/alvitre/images/home-bg-montain.jpg") repeat scroll center center / cover; */
-    /* height: 100vh; */
+        background: url("../images/background.jpg") repeat scroll center center / cover;
     height: 100%;
     width: 100%;
 }
