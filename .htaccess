@@ -1,9 +1,8 @@
-## EXPIRES CACHING ##
-<IfModule mod_expires.c>
-ExpiresActive On
-ExpiresByType image/webp "access plus 1 month"
-ExpiresByType text/x-javascript "access plus 1 month"
-ExpiresByType image/x-icon "access plus 1 year"
-ExpiresDefault "access plus 7 days"
+<IfModule mod_headers.c>
+    <FilesMatch "\.(ico|gif|jpg|jpeg|png|webp)$">
+          Header set Cache-Control "max-age=31536000"
+    </FilesMatch>
+    <FilesMatch "\.(css|js)$">
+          Header set Cache-Control "max-age=31536000"
+    </FilesMatch>
 </IfModule>
-## EXPIRES CACHING ##
