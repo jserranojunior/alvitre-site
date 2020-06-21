@@ -9,7 +9,9 @@ services:
     environment:
       - APACHE_HTTP_PORT_NUMBER=8082
     labels:
+      - "traefik.enable=true"
       - "traefik.http.routers.nginx_acolher.rule=Host(`acolher.alvitre.net`)"
+      - "traefik.http.routers.nginx_acolher.entrypoints=web"
       - "traefik.http.services.nginx_acolher.loadbalancer.server.port=8082"
   mysql_acolher:
     image: mysql:8.0.1
@@ -37,8 +39,10 @@ services:
     ports:
       - "2030:2030"
     labels:
-      - "traefik.http.routers.nginx_acolher.rule=Host(`backendacolher.alvitre.net`)"
-      - "traefik.http.services.nginx_acolher.loadbalancer.server.port=2030"
+      - "traefik.enable=true"
+      - "traefik.http.routers.php_acolher.rule=Host(`backendacolher.alvitre.net`)"
+      - "traefik.http.routers.php_acolher.entrypoints=web"
+      - "traefik.http.services.php_acolher.loadbalancer.server.port=2030"
     environment:
       PMA_HOST: mysql
     links:
