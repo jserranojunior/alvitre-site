@@ -8,7 +8,6 @@ services:
       - "80:80"
       - "8060:8060"
     volumes:
-      - "./000-default.conf:/etc/apache2/sites-available/000-default.conf"
       - "../../site:/app"
       - "../../../acolher/front/dist:/app/acolher/front"
       - ../../../acolher/back:/app/acolher/back
