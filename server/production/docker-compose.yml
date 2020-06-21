@@ -1,13 +1,18 @@
 version: "2"
 services:
-  php_nginx:
-    build: .
-    container_name: php_nginx
+  # php_nginx:
+  #   build: .
+  #   volumes:
+  #     - ../../../acolher/back:/app/acolher/back
+
+  apache:
+    image: bitnami/apache:latest
+    container_name: apache
     working_dir: /app
     ports:
-      - "80:80"
-      - "8060:8060"
+      - "80:8080"
+      - "443:8443"
     volumes:
-      - "../../site:/app"
-      - "../../../acolher/front/dist:/app/acolher/front"
-      - ../../../acolher/back:/app/acolher/back
+      - "./my_vhost.conf:/vhosts/my_vhost.conf:ro"
+      - "../../site:/app/alvitre"
+      - "../../../acolher/front/dist:/app/acolher"
