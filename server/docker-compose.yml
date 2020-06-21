@@ -1,0 +1,23 @@
+version: "2"
+services:
+  apache:
+    image: "bitnami/apache:latest"
+    ports:
+      - "8081:8081"
+      - "443:8443"
+    volumes:
+      - ../site:/app
+    environment:
+      - APACHE_HTTP_PORT_NUMBER=8081
+
+  traefik:
+    image: "traefik:v2.0.0"
+    command:
+      - --entrypoints.web.address=:80
+      - --providers.docker
+      - --api.insecure
+    ports:
+      - "80:80"
+      - "8080:8080"
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock:ro"
