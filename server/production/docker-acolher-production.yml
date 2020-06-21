@@ -47,11 +47,11 @@ services:
       PMA_HOST: mysql
     links:
       - "mysql_acolher"
-  composer_acolher:
-    image: composer:latest
-    container_name: composer_acolher
-    volumes:
-      - ../../../acolher/back:/usr/share/nginx/html
-    working_dir: /usr/share/nginx/html
-    depends_on:
-      - php_acolher
+  # composer_acolher:
+  #   image: composer:latest
+  #   container_name: composer_acolher
+  #   volumes:
+  #     - ../../../acolher/back:/usr/share/nginx/html
+  #   working_dir: /usr/share/nginx/html
+  #   depends_on:
+  #     - php_acolher

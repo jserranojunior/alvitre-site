@@ -1,8 +1,0 @@
-version: "2"
-services:
-  apache:
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.apache.rule=Host(`alvitre.net`)"
-      - "traefik.http.routers.apache.entrypoints=web"
-      - "traefik.http.services.apache.loadbalancer.server.port=81"
