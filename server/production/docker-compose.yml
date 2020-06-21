@@ -11,7 +11,7 @@ services:
       - APACHE_HTTP_PORT_NUMBER=8081
 
   traefik:
-    image: "traefik:v2.0.0"
+    image: "traefik"
     command:
       - --entrypoints.web.address=:80
       - --providers.docker
@@ -21,3 +21,4 @@ services:
       - "8080:8080"
     volumes:
       - "/var/run/docker.sock:/var/run/docker.sock:ro"
+      # - ./traefik.toml:/traefik.toml
