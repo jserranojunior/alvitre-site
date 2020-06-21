@@ -1,5 +1,5 @@
 
-FROM webdevops/php-apache:7.4
+FROM php:7.4-fpm-alpine
 
 WORKDIR /usr/share/nginx/html
 
