@@ -15,4 +15,4 @@ services:
     volumes:
       - "./my_vhost.conf:/vhosts/my_vhost.conf:ro"
       - "../../site:/app/alvitre"
-      - "../../../acolher/front/dist:/app/acolher"
+      - "../../../acolher/front/dist:/app/alvitre/acolher"
