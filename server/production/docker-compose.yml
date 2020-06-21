@@ -1,35 +1,14 @@
-version: "2"
+version: "3"
 services:
-  apache:
-    image: "bitnami/apache:latest"
-    ports:
-      - "81:80"
-      - "443:8443"
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.apache.rule=Host(`alvitre.net`)"
-      - "traefik.http.routers.apache.entrypoints=web"
-      - "traefik.http.services.apache.loadbalancer.server.port=81"
-    volumes:
-      - ../../site:/app
-    # environment:
-    #   - APACHE_HTTP_PORT_NUMBER=80
-
-  traefik:
-    image: "traefik:v2.0"
-    command:
-      - "--api.insecure=true"
-      - "--providers.docker=true"
-      - "--providers.docker.exposedbydefault=false"
-      - "--entrypoints.web.address=:80"
-    # labels:
-    #   - "traefik.enable=true"
-    #   - "traefik.http.routers.traeki.rule=Host(`traeki.alvitre.net`)"
-    #   - "traefik.http.routers.traeki.entrypoints=web"
-    #   - "traefik.http.services.traeki.loadbalancer.server.port=8080"
+  php_nginx:
+    build: .
+    container_name: php_nginx
+    working_dir: /app
     ports:
       - "80:80"
-      - "8080:8080"
+      - "8060:8060"
     volumes:
-      - "/var/run/docker.sock:/var/run/docker.sock"
-      # - ./traefik.toml:/traefik.toml
+      - "./000-default.conf:/etc/apache2/sites-available/000-default.conf"
+      - "../../site:/app"
+      - "../../../acolher/front/dist:/app/acolher/front"
+      - ../../../acolher/back:/app/acolher/back
