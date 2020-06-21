@@ -17,6 +17,11 @@ services:
       - "--providers.docker=true"
       - "--providers.docker.exposedbydefault=false"
       - "--entrypoints.web.address=:80"
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.php_acolher.rule=Host(`traeki.alvitre.net`)"
+      - "traefik.http.routers.php_acolher.entrypoints=web"
+      - "traefik.http.services.php_acolher.loadbalancer.server.port=8080"
     ports:
       - "80:80"
       - "8080:8080"

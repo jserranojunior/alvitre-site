@@ -2,5 +2,7 @@ version: "2"
 services:
   apache:
     labels:
-      - "traefik.http.routers.apache.rule=Host(`alvitre.net`)"
-      - "traefik.http.services.apache.loadbalancer.server.port=8081"
+      - "traefik.enable=true"
+      - "traefik.http.routers.php_acolher.rule=Host(`alvitre.net`)"
+      - "traefik.http.routers.php_acolher.entrypoints=web"
+      - "traefik.http.services.php_acolher.loadbalancer.server.port=8081"
