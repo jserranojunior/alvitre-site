@@ -3,12 +3,12 @@ services:
   apache:
     image: "bitnami/apache:latest"
     ports:
-      - "8081:8081"
+      - "81:80"
       - "443:8443"
     volumes:
       - ../../site:/app
-    environment:
-      - APACHE_HTTP_PORT_NUMBER=8081
+    # environment:
+    #   - APACHE_HTTP_PORT_NUMBER=80
 
   traefik:
     image: "traefik:v2.0"
@@ -19,9 +19,9 @@ services:
       - "--entrypoints.web.address=:80"
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.php_acolher.rule=Host(`traeki.alvitre.net`)"
-      - "traefik.http.routers.php_acolher.entrypoints=web"
-      - "traefik.http.services.php_acolher.loadbalancer.server.port=8080"
+      - "traefik.http.routers.traeki.rule=Host(`traeki.alvitre.net`)"
+      - "traefik.http.routers.traeki.entrypoints=web"
+      - "traefik.http.services.traeki.loadbalancer.server.port=8080"
     ports:
       - "80:80"
       - "8080:8080"

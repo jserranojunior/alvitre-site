@@ -3,6 +3,6 @@ services:
   apache:
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.php_acolher.rule=Host(`alvitre.net`)"
-      - "traefik.http.routers.php_acolher.entrypoints=web"
-      - "traefik.http.services.php_acolher.loadbalancer.server.port=8081"
+      - "traefik.http.routers.apache.rule=Host(`alvitre.net`)"
+      - "traefik.http.routers.apache.entrypoints=web"
+      - "traefik.http.services.apache.loadbalancer.server.port=81"
