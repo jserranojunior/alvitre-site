@@ -2,7 +2,7 @@ version: "2"
 
 services:
   php_apache:
-    image: webdevops/php-apache:7.4
+    build: .
     ports:
       - 80:80
       - 443:443
@@ -11,6 +11,7 @@ services:
       - "../../site:/var/www/html/alvitre"
       - "../../../acolher/front/dist:/var/www/html/alvitre/acolher"
       - "../../../acolher/back:/var/www/html/alvitre/backacolher"
+      # - "../../../phpmyadmin:/var/www/html/alvitre/phpmyadmin"
     environment:
       PMA_HOST: mysql
     links:
@@ -30,7 +31,6 @@ services:
       MYSQL_USER: acolher
       MYSQL_PASSWORD: acolher
       MYSQL_ROOT_PASSWORD: acolher
-      MYSQL_ROOT_HOST: "%"
       SERVICE_TAGS: dev
       SERVICE_NAME: mysql
     volumes:
@@ -38,12 +38,14 @@ services:
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin:latest
-    ports:
-      - 8000:80
     environment:
       PMA_HOST: mysql
-      PMA_USER: acolher
       PMA_PASSWORD: acolher
+      PMA_USER: acolher
+    links:
+      - mysql
+    ports:
+      - 8000:80
     depends_on:
       - mysql
   # php:
