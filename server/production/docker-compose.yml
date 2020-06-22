@@ -30,6 +30,7 @@ services:
       MYSQL_USER: acolher
       MYSQL_PASSWORD: acolher
       MYSQL_ROOT_PASSWORD: acolher
+      MYSQL_ROOT_HOST: "%"
       SERVICE_TAGS: dev
       SERVICE_NAME: mysql
     volumes:
