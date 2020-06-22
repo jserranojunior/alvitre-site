@@ -34,7 +34,7 @@ services:
       SERVICE_TAGS: dev
       SERVICE_NAME: mysql
     volumes:
-      - ../../../acolher/mysql:/var/lib/mysql
+      - ../../../acolher/mysql:/var/lib/mysql:rw,delegated
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin:latest
