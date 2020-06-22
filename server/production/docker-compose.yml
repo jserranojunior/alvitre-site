@@ -34,6 +34,17 @@ services:
       SERVICE_NAME: mysql
     volumes:
       - ../../../acolher/mysql:/var/lib/mysql
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    ports:
+      - 8000:80
+    environment:
+      PMA_HOST: mysql
+      PMA_USER: acolher
+      PMA_PASSWORD: acolher
+    depends_on:
+      - mysql
   # php:
   # build: .
   # volumes:
