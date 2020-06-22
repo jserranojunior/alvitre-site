@@ -23,7 +23,8 @@ services:
     image: mysql:8.0.1
     container_name: mysql
     restart: unless-stopped
-    tty: true
+    expose:
+      - "3306"
     ports:
       - "3306:3306"
     environment:
@@ -31,7 +32,6 @@ services:
       MYSQL_USER: acolher
       MYSQL_PASSWORD: acolher
       MYSQL_ROOT_PASSWORD: acolher
-      SERVICE_TAGS: dev
       SERVICE_NAME: mysql
     volumes:
       - ../../../acolher/mysql:/var/lib/mysql:rw,delegated
