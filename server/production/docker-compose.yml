@@ -1,31 +1,30 @@
 version: "2"
 
-networks:
-  alvitre:
-    driver: bridge
-
 services:
-  apache:
-    image: bitnami/apache:latest
-    container_name: apache
-    working_dir: /app
+  php_apache:
+    image: webdevops/php-apache:7.4
     ports:
-      - "80:8080"
-      - "443:8443"
+      - 80:80
+      - 443:443
     volumes:
-      - "./my_vhost.conf:/vhosts/my_vhost.conf:ro"
-      - "../../site:/app/alvitre"
-      - "../../../acolher/front/dist:/app/alvitre/acolher"
-    networks:
-      - alvitre
+      - "./vhost.conf:/opt/docker/etc/httpd/vhost.conf"
+      - "../../site:/var/www/html/alvitre"
+      - "../../../acolher/front/dist:/var/www/html/alvitre/acolher"
+      - "../../../acolher/back:/var/www/html/alvitre/backacolher"
+    environment:
+      PMA_HOST: mysql
+    links:
+      - mysql
+    depends_on:
+      - mysql
 
-  mysql_acolher:
+  mysql:
     image: mysql:8.0.1
-    container_name: mysql_acolher
+    container_name: mysql
     restart: unless-stopped
     tty: true
     ports:
-      - "2020:3306"
+      - "3306:3306"
     environment:
       MYSQL_DATABASE: acolher
       MYSQL_USER: acolher
@@ -35,32 +34,25 @@ services:
       SERVICE_NAME: mysql
     volumes:
       - ../../../acolher/mysql:/var/lib/mysql
-    networks:
-      - alvitre
-
-  php_acolher:
-    build: .
-    container_name: php_acolher
-    working_dir: /usr/share/nginx/html
-    volumes:
-      - ../../../acolher/back:/usr/share/nginx/html
-    command: "php artisan serve --host=0.0.0.0 --port=2030"
-    ports:
-      - "2030:2030"
-    environment:
-      PMA_HOST: mysql
-    links:
-      - "mysql_acolher"
-    networks:
-      - alvitre
-
-  composer_acolher:
-    image: composer:latest
-    container_name: composer_acolher
-    volumes:
-      - ../../../acolher/back:/usr/share/nginx/html
-    working_dir: /usr/share/nginx/html
-    depends_on:
-      - php_acolher
-    networks:
-      - alvitre
+  # php:
+  # build: .
+  # volumes:
+  #   - "../../../acolher/back:/var/www/alvitre/backacolher"
+  # ports:
+  #   - "9000:9000"
+  # environment:
+  #   PMA_HOST: mysql
+  # links:
+  #   - "mysql_acolher"
+  # networks:
+  #   - alvitre
+  # composer_acolher:
+  #   image: composer:latest
+  #   container_name: composer_acolher
+  #   volumes:
+  #     - ../../../acolher/back:/usr/share/nginx/html
+  #   working_dir: /usr/share/nginx/html
+  #   depends_on:
+  #     - php
+  #   networks:
+  #     - alvitre
