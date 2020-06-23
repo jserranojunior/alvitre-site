@@ -5,6 +5,7 @@ networks:
 services:
   php_apache:
     build: .
+    tty: true
     ports:
       - 80:80
       - 443:443
@@ -22,6 +23,18 @@ services:
       - mysql
     networks:
       web:
+
+  composer_acolher:
+    image: composer:latest
+    container_name: composer_acolher
+    volumes:
+      - ../../../acolher/back:/var/www/html/alvitre/backacolher"
+    working_dir: /var/www/html/alvitre/backacolher
+    command: php artisan storage:link
+    depends_on:
+      - php_apache
+    networks:
+      - web
 
   mysql:
     image: mysql:8.0.1
