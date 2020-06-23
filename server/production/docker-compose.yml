@@ -1,5 +1,7 @@
 version: "2"
-
+networks:
+  web:
+    driver: bridge
 services:
   php_apache:
     build: .
@@ -18,34 +20,36 @@ services:
       - mysql
     depends_on:
       - mysql
+    networks:
+      web:
 
   mysql:
     image: mysql:8.0.1
     container_name: mysql
-    restart: unless-stopped
-    expose:
-      - "3306"
     ports:
-      - "3306:3306"
+      - 3306:3306
     environment:
       MYSQL_DATABASE: acolher
       MYSQL_USER: acolher
-      MYSQL_PASSWORD: acolher
       MYSQL_ROOT_PASSWORD: acolher
       SERVICE_NAME: mysql
     volumes:
-      - ../../../acolher/mysql:/var/lib/mysql:rw,delegated
+      - ../../../acolher/mysql:/var/lib/mysql
+    networks:
+      - web
 
   phpmyadmin:
-    image: phpmyadmin/phpmyadmin:latest
+    image: phpmyadmin/phpmyadmin
     environment:
       PMA_HOST: mysql
+      PMA_USER: root
       PMA_PASSWORD: acolher
-      PMA_USER: acolher
     links:
       - mysql
     ports:
       - 8000:80
+    networks:
+      - web
     depends_on:
       - mysql
   # php:
