@@ -30,7 +30,7 @@ services:
     volumes:
       - ../../../acolher/back:/var/www/html/alvitre/backacolher"
     working_dir: /var/www/html/alvitre/backacolher
-    command: php artisan storage:link
+    command: bash -c "rm public/storage && php artisan storage:link"
     depends_on:
       - php_apache
     networks:
