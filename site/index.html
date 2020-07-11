@@ -8,253 +8,219 @@
     <meta http-equiv="Content-Language" content="pt-br">
 
 
-    <meta property="og:url"                content="http://alvitre.net/alvitre" />
-    <meta property="og:type"               content="article" />
-    <meta property="og:title"              content="Alvitre" />
-    <meta property="og:description"        content="Alvitre Desenvolvimento de Sistemas, Sites, Aplicativos" />
-    <meta property="og:image"              content="http://alvitre.net/alvitre/images/salvar/alvitre.png"/>
+    <meta property="og:url" content="http://alvitre.net/alvitre" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Alvitre" />
+    <meta property="og:description" content="Alvitre Desenvolvimento de Sistemas, Sites, Aplicativos" />
+    <meta property="og:image" content="http://alvitre.net/alvitre/images/salvar/alvitre.png" />
 
 
     <title>Alvitre</title>
     <link rel="shortcut icon" href="./assets/images/alvitre.webp">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <script defer src="https://use.fontawesome.com/releases/v5.13.0/js/all.js"></script>
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css"> -->
+    <!-- <link rel="stylesheet" href="./assets/css/style.css"> -->
+    <!-- <script defer src="https://use.fontawesome.com/releases/v5.13.0/js/all.js"></script> -->
     <link rel='manifest' href='./manifest.json'>
     <meta name="theme-color" content="#2196F3">
+
+    <link rel="stylesheet" href="./assets/css/tailwindbuilder.css">
 
 </head>
 
 <body>
 
- 
-
-    <div class="columns"  style="margin-top: 5px;background-color: aliceblue;">
-        <div class="column display-none is-centered has-text-centered div-install-pwa" >
+    <div class="flex" style="margin-top: 5px;background-color: aliceblue;">
+        <div class="w-full display-none is-centered text-center div-install-pwa">
             Disponível para instalação
-         <button class="button is-info is-small is-rounded btn-install-pwa">Adicione a tela inicial</button>
+            <button class="button is-info is-small is-rounded btn-install-pwa">Adicione a tela inicial</button>
         </div>
     </div>
 
 
-    <div class="container">
+    <div class="flex flex-wrap justify-between my-4 px-4">
+        <div>
+            <a href="https://alvitre.net/alvitre">
+                <picture>
+                    <source srcset="./assets/img/webp/alvitre.webp" type="image/webp">
+                    <source srcset="./assets/img/png/alvitre.png" type="image/jpeg">
+                    <img class="w-auto h-10" src="./assets/img/webp/alvitre.webp" alt="Logo da Alvitre!">
+                </picture>
+            </a>
+        </div>
 
-    
-        <div class="columns">
-            <div class="column">
-                <nav class="navbar is-white " role="navigation" aria-label="main navigation">
-                    <div class="navbar-brand">
-                        <a class="navbar-item" href="https://alvitre.net/alvitre">
-                            <img alt="logo alvitre" src="./assets/images/alvitre.webp">
-                            lvitre
-                        </a>
+        <div>
+            <nav>
+                <div class=" content-end">
+                    <a href="#header" class="nav-item mx-4 mt-4 text-dark">
+                        Inicio
+                    </a>
+                    <a href="#tecnologias" class="nav-item mx-4 mt-4 text-dark">
+                        Tecnologias
+                    </a>
+                    <a href="#desenvolvedor" class="nav-item mx-4 mt-4 text-dark">
+                        Desenvolvedor
+                    </a>
 
-                        <a onclick="navBarToggle()" role="button" class="navbar-burger is-active" aria-label="menu"
-                            aria-expanded="false">
-                            <span aria-hidden="true"></span>
-                            <span aria-hidden="true"></span>
-                            <span aria-hidden="true"></span>
-                        </a>
-                    </div>
-                    <div class="navbar-menu is-active">
-                        <div class="navbar-end">
-                            <a href="#header" class="navbar-item">
-                                Inicio
-                            </a>
-                            <a href="#tecnologias" class="navbar-item">
-                                Tecnologias
-                            </a>
-                            <a href="#desenvolvedor" class="navbar-item">
-                                Desenvolvedor
-                            </a>
-                            
-                            <a href="#portfolio" class="navbar-item">
-                                Portfólio
-                            </a>
-                            <a class="navbar-item" href="https://web.whatsapp.com/send?phone=5511946439695">
-                                <span class="icon is large has-text-success">
-                                    <i class="fab fa-2x fa-whatsapp"></i>
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                </nav>
-            </div>
+                    <a href="#portfolio" class="nav-item mx-4 mt-4 text-dark">
+                        Portfólio
+                    </a>
+                    <a class="nav-item mx-4 mt-4 text-dark" href="https://web.whatsapp.com/send?phone=5511946439695">
+                        <span class="icon is large text-blue-600">
+                            <i class="fab fa-2x fa-whatsapp"></i>
+                        </span>
+                        whatsapp
+                    </a>
+                </div>
+            </nav>
         </div>
     </div>
-    <header id="header">
-        <div class="container cont-pd">
-            <div class="columns ">
-                <div class="column is-centered">
-                    <figure class="image is-128x128 has-image-centered">
-                        <img class="" src="./assets/images/alvitre.webp" alt="logo alvitre">
-                    </figure>
-                    <h1 class="has-text-white is-size-2 has-text-centered">
-                        Alvitre
-                    </h1>
 
-                </div>
-            </div>
-            <div class="columns">
-                <div class="column  is-centered">
-                    <h3 class="has-text-white is-size-4 has-text-centered">
-                        DESENVOLVIMENTO
-                    </h3>
-                    <h2 class="titulo-principal has-text-white is-size-6 has-text-centered">SISTEMAS | SITES |
-                        APLICATIVOS |
-                        &#x2764;&#xFE0F;
-                    </h2>
-                </div>
+    <div class="flex flex-wrap justify-center bg-gray-800 py-12">
+        <div class="">
 
-            </div>
+            <picture>
+                <source srcset="./assets/img/webp/alvitre.webp" type="image/webp">
+                <source srcset="./assets/img/png/alvitre.png" type="image/jpeg">
+                <img class="w-auto h-40 object-center" src="./assets/img/webp/alvitre.webp" alt="Logo da Alvitre!">
+            </picture>
+
         </div>
-    </header>
-
-    <!-- <section>
-        <button class="is-primary" onclick="modalToggle()">ABRIR MODAL</button>
-        <div class="modal">
-            <div class="modal-background"></div>
-            <div class="modal-card">
-                <header class="modal-card-head">
-                    <p class="modal-card-title">Modal title</p>
-                    <button class="delete" aria-label="close" onclick="modalToggle()"></button>
-                </header>
-                <section class="modal-card-body">
-                </section>
-                <footer class="modal-card-foot">
-                    <button class="button is-success" onclick="modalToggle()">Save changes</button>
-                    <button class="button" onclick="modalToggle()">Cancel</button>
-                </footer>
-            </div>
-            <button class="modal-close is-large" aria-label="close" onclick="modalToggle()"></button>
+        <div class="w-full">
+            <h1 class="text-white text-center text-4xl">
+                Alvitre
+            </h1>
         </div>
-    </section> -->
+        <div class="w-full mt-2">
+            <h3 class="text-white text-1xl text-center">
+                DESENVOLVIMENTO
+            </h3>
+            <h2 class="text-white text-1xl text-center">SISTEMAS | SITES |
+                APLICATIVOS |
+                &#x2764;&#xFE0F;
+            </h2>
+        </div>
+    </div>
+
     <section id="tecnologias">
-        <div class="container cont-pd">
-            <div class="columns">
-                <div class="column is-centered has-text-centered">
-                    <h4 class="is-size-4 titulo-section">TECNOLOGIAS</h4>
+        <div class="flex my-10">
+            <div class="w-full justify-center text-center">
+                <h4 class="text-2xl text-center">TECNOLOGIAS</h4>
+            </div>
+        </div>
+        <div class="flex flex-wrap text-center">
+            <div class="w-1/4 p-6">
+                <div class="painel">
+                    <div class="painel-body">
+                        <i class="fa-3x fas fa-code has-text-grey-lighter"></i><br>
+                        <div class="w-full">
+                            <h5 class="text-1xl  text-bold">HTML/CSS</h5>
+                        </div>
+                        <p>Marcação e de estilos das páginas</p>
+                    </div>
                 </div>
             </div>
-            <div class="columns is-multiline has-text-centered">
-                <div class="column is-3">
-                    <div class="card">
-                        <div class="card-content">
-                            <i class="fa-3x fas fa-code has-text-grey-lighter"></i><br>
-                            <div class="column">
-                                <h5 class="is-size-6  has-text-bold">HTML/CSS</h5>
-                            </div>
-                            <p>Marcação e de estilos das páginas</p>
+            <div class="w-1/4 p-6">
+                <div class="painel">
+                    <div class="painel-body">
+                        <i class="fa-3x fab fa-node-js text-blue-600"></i><br>
+                        <div class="w-full">
+                            <h5 class="text-1xl  text-bold">NODE</h5>
                         </div>
+                        <p>Gerenciamento de pacotes</p>
                     </div>
                 </div>
-                <div class="column is-3">
-                    <div class="card">
-                        <div class="card-content">
-                            <i class="fa-3x fab fa-node-js has-text-success"></i><br>
-                            <div class="column">
-                                <h5 class="is-size-6  has-text-bold">NODE</h5>
-                            </div>
-                            <p>Gerenciamento de pacotes</p>
+            </div>
+            <div class="w-1/4 p-6">
+                <div class="painel">
+                    <div class="painel-body">
+                        <i class="fa-3x fab fa-php has-text-purple"></i><br>
+                        <div class="w-full">
+                            <h5 class="text-1xl  text-bold">PHP</h5>
                         </div>
+                        <p>Atualizado e facil hospedagem</p>
                     </div>
                 </div>
-                <div class="column  is-3">
-                    <div class="card">
-                        <div class="card-content">
-                            <i class="fa-3x fab fa-php has-text-purple"></i><br>
-                            <div class="column">
-                                <h5 class="is-size-6  has-text-bold">PHP</h5>
-                            </div>
-                            <p>Atualizado e facil hospedagem</p>
+            </div>
+            <div class="w-1/4 p-6">
+                <div class="painel">
+                    <div class="painel-body">
+                        <i class="fa-3x fab fa-js has-text-warning"></i>
+                        <div class="w-full">
+                            <h5 class="text-1xl  text-bold">JAVASCRIPT</h5>
                         </div>
+                        <p>Interatividade do sistema no lado cliente</p>
                     </div>
                 </div>
-                <div class="column is-3">
-                    <div class="card">
-                        <div class="card-content">
-                            <i class="fa-3x fab fa-js has-text-warning"></i>
-                            <div class="column">
-                                <h5 class="is-size-6  has-text-bold">JAVASCRIPT</h5>
-                            </div>
-                            <p>Interatividade do sistema no lado cliente</p>
+            </div>
+            <div class="w-1/4 p-6">
+                <div class="painel">
+                    <div class="painel-body">
+                        <i class="fa-3x fab fa-vuejs has-text-primary"></i>
+                        <div class="w-full">
+                            <h5 class="text-1xl  text-bold">VUEJS</h5>
                         </div>
+                        <p>Desenvolvimento frontend com VueJs</p>
                     </div>
                 </div>
-                <div class="column is-3">
-                    <div class="card">
-                        <div class="card-content">
-                            <i class="fa-3x fab fa-vuejs has-text-primary"></i>
-                            <div class="column">
-                                <h5 class="is-size-6  has-text-bold">VUEJS</h5>
-                            </div>
-                            <p>Desenvolvimento frontend com VueJs</p>
+            </div>
+            <div class="w-1/4 p-6">
+                <div class="painel">
+                    <div class="painel-body">
+                        <i class="fa-3x fab fa-laravel has-text-danger"></i>
+                        <div class="w-full">
+                            <h5 class="text-1xl h5 text-bold">LARAVEL</h5>
                         </div>
+                        <p>Desenvolvimento de API com laravel/lumem</p>
                     </div>
                 </div>
-                <div class="column is-3">
-                    <div class="card">
-                        <div class="card-content">
-                            <i class="fa-3x fab fa-laravel has-text-danger"></i>
-                            <div class="column">
-                                <h5 class="is-size-6 h5 has-text-bold">LARAVEL</h5>
-                            </div>
-                            <p>Desenvolvimento de API com laravel/lumem</p>
+            </div>
+            <div class="w-1/4 p-6">
+                <div class="painel">
+                    <div class="painel-body">
+                        <i class="fa-3x fas fa-database has-text-orangered"></i>
+                        <div class="w-full">
+                            <h5 class="text-1xl  text-bold">MYSQL/SQL</h5>
                         </div>
+                        <p>Gerenciamento de banco de dados</p>
                     </div>
                 </div>
-                <div class="column is-3">
-                    <div class="card">
-                        <div class="card-content">
-                            <i class="fa-3x fas fa-database has-text-orangered"></i>
-                            <div class="column">
-                                <h5 class="is-size-6  has-text-bold">MYSQL/SQL</h5>
-                            </div>
-                            <p>Gerenciamento de banco de dados</p>
+            </div>
+            <div class="w-1/4 p-6">
+                <div class="painel">
+                    <div class="painel-body">
+                        <i class="fa-3x fas fa-cloud text-blue-600"></i>
+                        <div class="w-full">
+                            <h5 class="text-1xl  text-bold">NUVEM</h5>
                         </div>
+                        <p>Hospedagem em nuvem google cloud</p>
                     </div>
                 </div>
-                <div class="column is-3">
-                    <div class="card">
-                        <div class="card-content">
-                            <i class="fa-3x fas fa-cloud has-text-info"></i>
-                            <div class="column">
-                                <h5 class="is-size-6  has-text-bold">NUVEM</h5>
-                            </div>
-                            <p>Hospedagem em nuvem google cloud</p>
-                        </div>
-                    </div>
-
-                </div>
-
-
-
             </div>
         </div>
     </section>
+
     <section class="section has-background-light" id="desenvolvedor">
-        <div class="container">
-            <div class="columns">
-                <div class="column is-centered has-text-centered">
-                    <h4 class="is-size-4 titulo-section">Desenvolvedor</h4>
-                </div>
+        <div class="flex my-10">
+            <div class="w-full justify-center text-center">
+                <h4 class="text-2xl text-center">DESENVOLVEDOR</h4>
             </div>
-            <div class="columns is-centered is-vcentered">
-                <div class="column is-3">
-                    <figure class="image ">
-                        <img class="is-rounded"
-                            src="https://avatars3.githubusercontent.com/u/19535872?s=460&u=f4404823a6310a83175161f58bb14cf177327ddb&v=4"
-                            alt="foto jorge">
-                    </figure>
-                    <!-- <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
+        </div>
+        <div class="flex flex-wrap justify-center">
+            <div class="w-1/4 mx-1">
+                <figure class="image ">
+                    <img class="rounded-full h-64 w-auto"
+                        src="https://avatars3.githubusercontent.com/u/19535872?s=460&u=f4404823a6310a83175161f58bb14cf177327ddb&v=4"
+                        alt="foto jorge">
+                </figure>
+                <!-- <div class="flip-painel">
+                        <div class="flip-painel-inner">
+                            <div class="flip-painel-front">
                                 <figure class="image ">
                                     <img class="is-rounded"
                                         src="http://alvitre.net/alvitre/images/programador/jorge.jpg" alt="">
                                 </figure>
                             </div>
-                            <div class="flip-card-back">
+                            <div class="flip-painel-back">
                                 <figure class="image ">
                                     <img class="is-rounded"
                                         src="https://avatars3.githubusercontent.com/u/19535872?s=460&u=f4404823a6310a83175161f58bb14cf177327ddb&v=4"
@@ -265,45 +231,51 @@
 
                         </div>
                     </div> -->
-                </div>
-                <div class="column is-two-fifths">
-                    <div class="card">
-                        <div class="card-content no-padding">
-                            <div class="column">
-                                <p>Desenvolver de sistemas full-stack <br>
-                                    Fundador da <span class="has-text-info">Alvitre</span><br>
-                                    <br>
-                                    <i class="fas fa-map-marker-alt has-text-orangered"></i> São Paulo - Brasil <br>
-                                    <i class="far fa-envelope has-text-purple"></i> jorgeserranojunior@hotmail.com<br>
-                                    <i class="fas fa-globe-americas has-text-success"></i></i> www.alvitre.net<br>
-                                </p>
-                            </div>
-                            <div class="column">
-                                <a href="https://github.com/jserranojunior">
-                                    <button class="button is-info is-small">
-                                        <i class="fab fa-github"></i>
-                                        <h5>Github</h5>
-                                    </button>
-                                </a>
-                                <a href="https://www.linkedin.com/in/jorgeserranojunior/">
-                                <button class="button is-primary is-small">
+            </div>
+            <div class="w-1/4  mx-1">
+                <div class="painel">
+                    <div class="painel-body align-middle">
+                        <div class="w-full align-middle">
+                            <p>Desenvolver de sistemas full-stack <br>
+                                Fundador da <span class="text-blue-600">Alvitre</span><br>
+                                <br>
+                                <i class="fas fa-map-marker-alt has-text-orangered"></i> São Paulo - Brasil <br>
+                                <i class="far fa-envelope has-text-purple"></i> jorgeserranojunior@hotmail.com<br>
+                                <i class="fas fa-globe-americas text-blue-600"></i></i> www.alvitre.net<br>
+                            </p>
+                        </div>
+                        <div class="w-full mt-4 align-middle">
+                            <a href="https://github.com/jserranojunior">
+                                <button class="bg-blue-600 text-white rounded-sm p-1">
+                                    <i class="fab fa-github"></i>
+                                    <h5>Github</h5>
+                                </button>
+                            </a>
+                            <a href="https://www.linkedin.com/in/jorgeserranojunior/">
+                                <button class="bg-green-600 text-white rounded-sm p-1">
                                     <i class="fab fa-linkedin"></i>Linkedin
                                 </button>
-                                </a>
-                                
-                                
-                            </div>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <header id="header" class="mt-64 ">
+        <div class="container cont-pd">
+            <div class="flex">
+            </div>
+        </div>
+    </header>
+
+
     <section id="portfolio">
         <div class="container cont-pd">
-            <div class="columns">
-                <div class="column is-centered">
-                    <h4 class="is-size-4 titulo-section has-text-centered">PORTFÓLIO</h4>
+            <div class="flex">
+                <div class="w-full is-centered">
+                    <h4 class="is-size-4 titulo-section text-center">PORTFÓLIO</h4>
                     <div class="tabs tabs is-toggle is-toggle-rounded is-centered">
                         <ul>
                             <li id="todos" onClick="changePortfolio('todos')"><a>Todos</a></li>
@@ -317,15 +289,15 @@
                 </div>
             </div>
 
-            <div class="columns is-multiline columns-portfolio">
+            <div class="flex flex-wrap flex-portfolio">
             </div>
         </div>
     </section>
 
     <footer>
         <div class="container">
-            <div class="columns is-centered">
-                <div class="column has-text-centered">
+            <div class="flex is-centered">
+                <div class="w-full text-center">
                     <button class="button is-white">
                         <a href="https://www.facebook.com/alvitrenet/?ref=br_rs">
                             <i class="fab fa-2x has-text-link fa-facebook-square"></i>
@@ -335,20 +307,20 @@
                         <a href="https://www.instagram.com/alvitreempresa/?hl=pt-br">
                             <i class="fab fa-2x has-text-danger fa-instagram"></i>
                         </a>
-                        
+
                     </button>
 
                     <button class="button is-white">
                         <a href="https://web.whatsapp.com/send?phone=5511946439695">
-                            <i class="fab fa-2x has-text-success fa-whatsapp"></i>
+                            <i class="fab fa-2x text-blue-600 fa-whatsapp"></i>
                         </a>
-                        
+
                     </button>
 
                 </div>
             </div>
-            <div class="columns">
-                <div class="column has-text-centered">
+            <div class="flex">
+                <div class="w-full text-center">
                     <p> Alvitre { 2020 } -Todos os direitos reservados.</p>
                 </div>
             </div>
@@ -360,10 +332,11 @@
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-164765318-1"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  gtag('config', 'UA-164765318-1');
+    gtag('config', 'UA-164765318-1');
 </script>
+
 </html>

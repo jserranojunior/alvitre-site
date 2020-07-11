@@ -1,5 +1,17 @@
 @tailwind base;
 
 @tailwind components;
+.painel {
+  @apply bg-white rounded w-full px-3 py-2 shadow;
+}
+.painel-header {
+  @apply text-center border-b border-gray-200 py-2;
+}
+.painel-body {
+  @apply border-b border-gray-200 py-2;
+}
+.painel-footer {
+  @apply py-2;
+}
 
 @tailwind utilities;
