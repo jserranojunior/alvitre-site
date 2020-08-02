@@ -28,171 +28,171 @@ btnPWA.addEventListener("click", () => {
   myPrompt.prompt();
 });
 
-var $portfolio = document.querySelector(".columns-portfolio"),
+var $portfolio = document.querySelector(".flex-portfolio"),
   portfolios = [
     {
       nome: "lsstar",
-      thumbnail: "./assets/images/portfolio/thumbnail/lsstar.webp",
+      thumbnail: "./assets/img/portfolio/thumbnail/lsstar.webp",
       tipo: "site",
     },
     {
       nome: "abcp",
-      thumbnail: "./assets/images/portfolio/thumbnail/abcp.webp",
+      thumbnail: "./assets/img/portfolio/thumbnail/abcp.webp",
       tipo: "site",
     },
     {
       nome: "ajz",
-      thumbnail: "./assets/images/portfolio/thumbnail/ajz.webp",
+      thumbnail: "./assets/img/portfolio/thumbnail/ajz.webp",
       tipo: "blog",
     },
     {
       nome: "bella",
-      thumbnail: "./assets/images/portfolio/thumbnail/bella.webp",
+      thumbnail: "./assets/img/portfolio/thumbnail/bella.webp",
       tipo: "blog",
     },
     {
       nome: "bressan",
-      thumbnail: "./assets/images/portfolio/thumbnail/bressan.webp",
+      thumbnail: "./assets/img/portfolio/thumbnail/bressan.webp",
       tipo: "site",
     },
     {
       nome: "casadelpueblo",
-      thumbnail: "./assets/images/portfolio/thumbnail/casadelpueblo.webp",
+      thumbnail: "./assets/img/portfolio/thumbnail/casadelpueblo.webp",
       tipo: "blog",
     },
     {
       nome: "espacovitoria",
-      thumbnail: "./assets/images/portfolio/thumbnail/espacovitoria.webp",
+      thumbnail: "./assets/img/portfolio/thumbnail/espacovitoria.webp",
       tipo: "site",
     },
     {
       nome: "fazao",
-      thumbnail: "./assets/images/portfolio/thumbnail/fazao.webp",
+      thumbnail: "./assets/img/portfolio/thumbnail/fazao.webp",
       tipo: "blog",
     },
     {
       nome: "fenix",
-      thumbnail: "./assets/images/portfolio/thumbnail/fenix.webp",
+      thumbnail: "./assets/img/portfolio/thumbnail/fenix.webp",
       tipo: "blog",
     },
     {
       nome: "fso",
-      thumbnail: "./assets/images/portfolio/thumbnail/fso.webp",
+      thumbnail: "./assets/img/portfolio/thumbnail/fso.webp",
       tipo: "site",
     },
     {
       nome: "papeis",
-      thumbnail: "./assets/images/portfolio/thumbnail/papeis.webp",
+      thumbnail: "./assets/img/portfolio/thumbnail/papeis.webp",
       tipo: "blog",
     },
     {
       nome: "projetoeducar",
-      thumbnail: "./assets/images/portfolio/thumbnail/projetoeducar.webp",
+      thumbnail: "./assets/img/portfolio/thumbnail/projetoeducar.webp",
       tipo: "blog",
     },
     {
       nome: "criançamaissaudavel",
-      thumbnail: "./assets/images/portfolio/thumbnail/criançamaissaudavel.webp",
+      thumbnail: "./assets/img/portfolio/thumbnail/criançamaissaudavel.webp",
       tipo: "blog",
     },
     {
       nome: "maquinas",
-      thumbnail: "./assets/images/portfolio/thumbnail/maquinas.webp",
+      thumbnail: "./assets/img/portfolio/thumbnail/maquinas.webp",
       tipo: "site",
     },
     {
       nome: "mistersalad",
-      thumbnail: "./assets/images/portfolio/thumbnail/mistersalad.webp",
+      thumbnail: "./assets/img/portfolio/thumbnail/mistersalad.webp",
       tipo: "site",
     },
     {
       nome: "naturelle",
-      thumbnail: "./assets/images/portfolio/thumbnail/naturelle.webp",
+      thumbnail: "./assets/img/portfolio/thumbnail/naturelle.webp",
       tipo: "site",
     },
     {
       nome: "nnobre",
-      thumbnail: "./assets/images/portfolio/thumbnail/nnobre.webp",
+      thumbnail: "./assets/img/portfolio/thumbnail/nnobre.webp",
       tipo: "site",
     },
     {
       nome: "oneello",
-      thumbnail: "./assets/images/portfolio/thumbnail/oneello.webp",
+      thumbnail: "./assets/img/portfolio/thumbnail/oneello.webp",
       tipo: "site",
     },
     {
       nome: "psd",
-      thumbnail: "./assets/images/portfolio/thumbnail/psd.webp",
+      thumbnail: "./assets/img/portfolio/thumbnail/psd.webp",
       tipo: "site",
     },
     {
       nome: "sandwich",
-      thumbnail: "./assets/images/portfolio/thumbnail/sandwich.webp",
+      thumbnail: "./assets/img/portfolio/thumbnail/sandwich.webp",
       tipo: "site",
     },
     {
       nome: "setup",
-      thumbnail: "./assets/images/portfolio/thumbnail/setup.webp",
+      thumbnail: "./assets/img/portfolio/thumbnail/setup.webp",
       tipo: "site",
     },
     {
       nome: "sindimei",
-      thumbnail: "./assets/images/portfolio/thumbnail/sindimei.webp",
+      thumbnail: "./assets/img/portfolio/thumbnail/sindimei.webp",
       tipo: "site",
     },
     {
       nome: "sorveteriamadrid",
-      thumbnail: "./assets/images/portfolio/thumbnail/sorveteriamadrid.webp",
+      thumbnail: "./assets/img/portfolio/thumbnail/sorveteriamadrid.webp",
       tipo: "blog",
     },
     {
       nome: "telecon",
-      thumbnail: "./assets/images/portfolio/thumbnail/telecon.webp",
+      thumbnail: "./assets/img/portfolio/thumbnail/telecon.webp",
       tipo: "site",
     },
     {
       nome: "temperato",
-      thumbnail: "./assets/images/portfolio/thumbnail/temperato.webp",
+      thumbnail: "./assets/img/portfolio/thumbnail/temperato.webp",
       tipo: "site",
     },
     {
       nome: "universidadesabor",
-      thumbnail: "./assets/images/portfolio/thumbnail/universidadesabor.webp",
+      thumbnail: "./assets/img/portfolio/thumbnail/universidadesabor.webp",
       tipo: "blog",
     },
     {
       nome: "vitastiq",
-      thumbnail: "./assets/images/portfolio/thumbnail/vitastiq.webp",
+      thumbnail: "./assets/img/portfolio/thumbnail/vitastiq.webp",
       tipo: "site",
     },
     {
       nome: "lsstar-sistema",
-      thumbnail: "./assets/images/portfolio/thumbnail/lsstar-sistema.webp",
+      thumbnail: "./assets/img/portfolio/thumbnail/lsstar-sistema.webp",
       tipo: "sistema",
     },
     {
       nome: "vdlap-financeiro",
-      thumbnail: "./assets/images/portfolio/thumbnail/vdlap-financeiro.webp",
+      thumbnail: "./assets/img/portfolio/thumbnail/vdlap-financeiro.webp",
       tipo: "sistema",
     },
     {
       nome: "vdlap",
-      thumbnail: "./assets/images/portfolio/thumbnail/vdlap.webp",
+      thumbnail: "./assets/img/portfolio/thumbnail/vdlap.webp",
       tipo: "sistema",
     },
     {
       nome: "megamed",
-      thumbnail: "./assets/images/portfolio/thumbnail/megamed.webp",
+      thumbnail: "./assets/img/portfolio/thumbnail/megamed.webp",
       tipo: "sistema",
     },
     {
       nome: "megamed-estoque",
-      thumbnail: "./assets/images/portfolio/thumbnail/megamed-estoque.webp",
+      thumbnail: "./assets/img/portfolio/thumbnail/megamed-estoque.webp",
       tipo: "sistema",
     },
     {
       nome: "contadigital",
-      thumbnail: "./assets/images/portfolio/thumbnail/contadigital.webp",
+      thumbnail: "./assets/img/portfolio/thumbnail/contadigital.webp",
       tipo: "sistema",
     },
   ];
@@ -229,7 +229,7 @@ function efeitoMaquinaDeEscrever(o) {
 }
 Array.prototype.forEach.call(portfolios, function (o) {
   $portfolio.innerHTML +=
-    '<div class="column is-4 portfolio ' +
+    '<div class="w-4/12 portfolio ' +
     o.tipo +
     '"><div class="card"><div class="card-content"><img class="" src="' +
     o.thumbnail +
