@@ -43,6 +43,13 @@ module.exports = {
     // }
   },
   variants: {},
+  purge: {
+    content: ["./site/*.html"],
+    options: {
+      whitelist: ["bg-red-500", "px-4"],
+    },
+  },
+
   plugins: [
     function ({ addBase, config }) {
       addBase({

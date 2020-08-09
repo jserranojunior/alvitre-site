@@ -1,12 +1,11 @@
-var CACHE_NAME = "v1.7";
+var CACHE_NAME = "v1.9.3";
 var urlsToCache = [
-  "/alvitre/",
-  "/alvitre/index.html",
-  "/alvitre/js/scripts.js",
-  "/alvitre/js/portfolio.js",
-  "/alvitre/css/style.css",
-  "/alvitre/images/alvitre.webp",
-  "/alvitre/sw.js",
+  "/",
+  "/site/index.html",
+  "/site/assets/js/scripts-min.js",
+  "/site/assets/css/style-min.css",
+  "/site/assets/img/webp/alvitre.webp",
+  "/site/sw.js",
 ];
 
 self.addEventListener("install", function (event) {

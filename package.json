@@ -5,7 +5,11 @@
   "main": "sw.js",
   "scripts": {
     "test": "npm run test",
-    "tail": "npx tailwindcss build ./src/styles/tailwindbuilder.css -o ./site/assets/css/tailbuider.css && gulp css"
+    "tail": "npx tailwindcss build ./src/styles/tailwind.css -o ./src/styles/tailwindfull.css && gulp tail",
+    "js": "gulp js",
+    "purge": "gulp purge",
+    "css": "gulp css",
+    "cssconcat": "gulp cssconcat"
   },
   "author": "",
   "license": "ISC",
@@ -13,6 +17,13 @@
     "gulp": "^4.0.2",
     "gulp-clean-css": "^4.3.0",
     "gulp-postcss": "^8.0.0",
-    "tailwindcss": "^1.4.6"
+    "gulp-purgecss": "^2.3.0",
+    "postcss-import": "^12.0.1",
+    "tailwindcss": "^1.6.2"
+  },
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^2.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-minify": "^3.1.0"
   }
 }
