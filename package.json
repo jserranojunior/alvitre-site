@@ -9,13 +9,15 @@
     "js": "gulp js",
     "purge": "gulp purge",
     "css": "gulp css",
-    "cssconcat": "gulp cssconcat"
+    "cssconcat": "gulp cssconcat",
+    "html": "gulp html"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "gulp": "^4.0.2",
     "gulp-clean-css": "^4.3.0",
+    "gulp-htmlmin": "^5.0.1",
     "gulp-postcss": "^8.0.0",
     "gulp-purgecss": "^2.3.0",
     "postcss-import": "^12.0.1",

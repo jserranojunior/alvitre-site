@@ -1,0 +1,21 @@
+version: "2"
+services:
+  php_apache:
+    image: webdevops/php-apache:7.4
+    tty: true
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - "./vhost.conf:/opt/docker/etc/httpd/vhost.conf"
+      - "../../site:/var/www/html/alvitre"
+
+  node:
+    image: node:alpine
+    container_name: nodejs
+    restart: unless-stopped
+    tty: true
+    ports:
+      - "3001:3000"
+    volumes:
+      - ../:/app

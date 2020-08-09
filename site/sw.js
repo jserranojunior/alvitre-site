@@ -1,11 +1,11 @@
-var CACHE_NAME = "v1.9.3";
+var CACHE_NAME = "v1.2.1";
 var urlsToCache = [
   "/",
-  "/site/index.html",
-  "/site/assets/js/scripts-min.js",
-  "/site/assets/css/style-min.css",
-  "/site/assets/img/webp/alvitre.webp",
-  "/site/sw.js",
+  "/index.html",
+  "/assets/js/scripts-min.js",
+  "/assets/css/style-min.css",
+  "/assets/img/webp/alvitre.webp",
+  "/sw.js",
 ];
 
 self.addEventListener("install", function (event) {

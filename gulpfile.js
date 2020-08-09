@@ -55,4 +55,13 @@ gulp.task("js", function () {
     .pipe(gulp.dest("./site/assets/js"));
 });
 
+gulp.task("html", () => {
+  const htmlmin = require("gulp-htmlmin");
+
+  return gulp
+    .src("./src/pages/*.html")
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(gulp.dest("./site"));
+});
+
 gulp.task("tail", gulp.parallel("purge", "cssconcat"));
