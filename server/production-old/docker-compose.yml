@@ -1,0 +1,89 @@
+version: "2"
+networks:
+  web:
+    driver: bridge
+services:
+  php_apache:
+    build: .
+    tty: true
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - "./vhost.conf:/opt/docker/etc/httpd/vhost.conf"
+      - "../../site:/var/www/html/alvitre"
+      - "../../../acolher/front/dist:/var/www/html/alvitre/acolher"
+      - "../../../acolher/back:/var/www/html/alvitre/backacolher"
+      # - "../../../phpmyadmin:/var/www/html/alvitre/phpmyadmin"
+    environment:
+      PMA_HOST: mysql
+    links:
+      - mysql
+    depends_on:
+      - mysql
+    networks:
+      web:
+
+  composer_acolher:
+    image: composer:latest
+    container_name: composer_acolher
+    volumes:
+      - ../../../acolher/back:/var/www/html/alvitre/backacolher"
+    working_dir: /var/www/html/alvitre/backacolher
+    command: bash -c "rm public/storage && php artisan storage:link"
+    depends_on:
+      - php_apache
+    networks:
+      - web
+
+  mysql:
+    image: mysql:8.0.1
+    container_name: mysql
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_DATABASE: acolher
+      MYSQL_USER: acolher
+      MYSQL_ROOT_PASSWORD: acolher
+      SERVICE_NAME: mysql
+    volumes:
+      - ../../../acolher/mysql:/var/lib/mysql
+    networks:
+      - web
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    environment:
+      PMA_HOST: mysql
+      PMA_USER: root
+      PMA_PASSWORD: acolher
+    links:
+      - mysql
+    ports:
+      - 8000:80
+    networks:
+      - web
+    depends_on:
+      - mysql
+  # php:
+  # build: .
+  # volumes:
+  #   - "../../../acolher/back:/var/www/alvitre/backacolher"
+  # ports:
+  #   - "9000:9000"
+  # environment:
+  #   PMA_HOST: mysql
+  # links:
+  #   - "mysql_acolher"
+  # networks:
+  #   - alvitre
+  # composer_acolher:
+  #   image: composer:latest
+  #   container_name: composer_acolher
+  #   volumes:
+  #     - ../../../acolher/back:/usr/share/nginx/html
+  #   working_dir: /usr/share/nginx/html
+  #   depends_on:
+  #     - php
+  #   networks:
+  #     - alvitre
