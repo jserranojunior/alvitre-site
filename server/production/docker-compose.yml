@@ -1,15 +1,13 @@
-version: "2"
-networks:
-  web:
-    driver: bridge
+version: "3"
 services:
-  php_apache:
+  apache:
     image: "webdevops/apache"
-    ports:
-      - 80:80
-      - 443:443
     volumes:
       - "./vhost.conf:/opt/docker/etc/httpd/vhost.conf"
       - "../../site:/app/alvitre"
-    networks:
-      web:
+    ports:
+      - "800:80"
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.alvitre.rule=Host(`apache.localhost`)"
+      - "traefik.http.services.alvitre.loadbalancer.server.port=800"

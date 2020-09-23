@@ -1,21 +1,13 @@
 version: "2"
 services:
   php_apache:
-    image: webdevops/php-apache:7.4
-    tty: true
+    image: "webdevops/apache"
     ports:
-      - 80:80
-      - 443:443
+      - 600:80
     volumes:
       - "./vhost.conf:/opt/docker/etc/httpd/vhost.conf"
-      - "../../site:/var/www/html/alvitre"
-
-  node:
-    image: node:alpine
-    container_name: nodejs
-    restart: unless-stopped
-    tty: true
-    ports:
-      - "3001:3000"
-    volumes:
-      - ../:/app
+      - "../../site:/app/alvitre"
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.local.rule=Host(`alvitre.localhost`)"
+      - "traefik.http.services.local.loadbalancer.server.port=600"
