@@ -1,10 +1,11 @@
-var CACHE_NAME = "v1.2.2";
+var CACHE_NAME = "v1.2.4";
 var urlsToCache = [
   "/",
   "/index.html",
   "/assets/js/scripts-min.js",
   "/assets/css/style-min.css",
-  "/assets/img/webp/alvitre.webp",
+  "/assets/img/logo/webp/alvitre.webp",
+  "/assets/img/logo/png/alvitre.png",
   "/sw.js",
 ];
 
