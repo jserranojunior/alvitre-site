@@ -1,0 +1,17 @@
+version: "2"
+
+networks:
+  internal:
+    driver: bridge
+services:
+  apache:
+    container_name: "apache"
+    image: "webdevops/apache"
+    volumes:
+      - "../site:/app"
+    networks:
+      - internal
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.local.rule=Host(`${DOMAIN}`)"
+      - "traefik.http.services.local.loadbalancer.server.port=80"
