@@ -13,6 +13,5 @@ services:
       - internal
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.local.rule=Host(`${DOMAIN}`)"
-      - "traefik.http.routers.local.rule=Host(`www.${DOMAIN}`)"
+      - "traefik.http.routers.local.rule=Host(`${DOMAIN}`, `www.${DOMAIN}`)"
       - "traefik.http.services.local.loadbalancer.server.port=80"
