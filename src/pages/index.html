@@ -31,10 +31,54 @@
 <body>
 
     <header>
+
+        <!-- <nav class="flex items-center justify-between flex-wrap bg-gray-800 p-6 fixed w-full z-10 top-0">
+            <div class="flex items-center flex-shrink-0 text-white mr-6">
+                <a class="text-white no-underline hover:text-white hover:no-underline" href="#">
+                    <span class="text-2xl pl-2"><i class="em em-grinning"></i> Brand McBrandface</span>
+                </a>
+            </div>
+            <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block pt-6 lg:pt-0"
+                id="nav-content">
+                <ul class="list-reset lg:flex justify-end flex-1 items-center">
+                    <li class="mr-3">
+                        <a class="inline-block py-2 px-4 text-white no-underline" href="#">Active</a>
+                    </li>
+                    <li class="mr-3">
+                        <a class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-4"
+                            href="#">link</a>
+                    </li>
+                    <li class="mr-3">
+                        <a class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-4"
+                            href="#">link</a>
+                    </li>
+                    <li class="mr-3">
+                        <a class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-4"
+                            href="#">link</a>
+                    </li>
+                </ul>
+            </div>
+        </nav> -->
+
+
+
         <div class="flex flex-wrap sm:justify-center md:justify-between my-2 px-4 header">
             <div class="w-full sm:w-full md:w-auto lg:auto text-center md:text-left">
-                <nav>
-                    <div class="align-middle mt-1 ">
+
+
+                <nav class="align-middle flex">
+
+
+                    <span class="block lg:hidden">
+                        <button onclick="togleMenu()"
+                            class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-gray-800 hover:border-white active:border-0">
+                            <svg class="fill-current h-4 w-4" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <title>Menu</title>
+                                <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+                            </svg>
+                        </button>
+                    </span>
+                    <span id="main-menu" class="mt-1 hidden  lg:block">
                         <a name="inicio" href="#header" class="nav-item mx-4 mt-4 text-dark">
                             Inicio
                         </a>
@@ -49,44 +93,23 @@
                             Portfólio
                         </a>
 
-                    </div>
-                </nav>
-            </div>
-            <div class="w-full sm:w-full md:w-auto lg:auto text-center md:text-right">
-                <a name="whatsapp" class="mx-4 mt-4 text-dark  "
-                    href="https://web.whatsapp.com/send?phone=5511946439695">
-                    <span class="icon is large text-green-600">
-                        <i class="fab fa-2x fa-whatsapp"></i>
-                    </span>
+                        <a name="whatsapp" href="https://web.whatsapp.com/send?phone=5511946439695"
+                            class="nav-item mx-4 mt-4 text-dark">
+                            <span class="icon is large text-green-600">
+                                <i class="fab fa-1x fa-whatsapp"></i>
+                            </span> Contato
+                        </a>
 
-                </a>
+                    </span>
+                </nav>
+
             </div>
+
         </div>
+
+
     </header>
 
-    <div class=" fixed top-0 right-0 div-install-pwa toastNotifications">
-        <div class="border-blue-400 border-l-4 mx-auto m-1 bg-white shadow-lg rounded-lg   mr-2">
-            <div class="flex flex-wrap  justify-between ">
-                <div class="text-sm p-3 btn-install-pwa cursor-pointer">
-                    <span class="text-left font-bold ">Adicione a tela inicial</span>
-                    <div class="toast-body-tail ">
-                        <div class="text-gray-600 tracking-tight">Disponível para instalação</div>
-                    </div>
-                </div>
-
-                <div class="border-l px-1 cursor-pointer btn-pwa-close">
-                    <div class=" text-center my-5">
-                        <svg class="fill-current hover:text-red-600 text-red-400" xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 24 24" width="22" height="22">
-                            <path class="heroicon-ui"
-                                d="M16.24 14.83a1 1 0 0 1-1.41 1.41L12 13.41l-2.83 2.83a1 1 0 0 1-1.41-1.41L10.59 12 7.76 9.17a1 1 0 0 1 1.41-1.41L12 10.59l2.83-2.83a1 1 0 0 1 1.41 1.41L13.41 12l2.83 2.83z" />
-                        </svg>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <div class="flex flex-wrap justify-center  py-12" id="header">
         <div class="w-full">
@@ -113,6 +136,31 @@
             <h4 class="text-white text-1xl text-center">SISTEMAS | SITES |
                 APLICATIVOS
             </h4>
+        </div>
+        <div class="right-0 mt-4">
+            <div class="div-install-pwa toastNotifications">
+                <div class="border-blue-400 border-l-4 mx-auto  bg-white shadow-lg rounded-lg  hover:bg-blue-100">
+                    <div class="flex flex-wrap  justify-between ">
+                        <div class="text-sm p-3 btn-install-pwa cursor-pointer">
+                            <span class="text-left font-bold ">Adicione a tela inicial</span>
+                            <div class="toast-body-tail ">
+                                <div class="text-gray-600 tracking-tight">Disponível para instalação</div>
+                            </div>
+                        </div>
+
+                        <div class="border-l px-1 cursor-pointer btn-pwa-close">
+                            <div class=" text-center my-5">
+                                <svg class="fill-current hover:text-red-600 text-red-400"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22">
+                                    <path class="heroicon-ui"
+                                        d="M16.24 14.83a1 1 0 0 1-1.41 1.41L12 13.41l-2.83 2.83a1 1 0 0 1-1.41-1.41L10.59 12 7.76 9.17a1 1 0 0 1 1.41-1.41L12 10.59l2.83-2.83a1 1 0 0 1 1.41 1.41L13.41 12l2.83 2.83z" />
+                                </svg>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -376,5 +424,6 @@
 
 </body>
 <script rel=preload src="./assets/js/scripts-min.js"></script>
+
 
 </html>

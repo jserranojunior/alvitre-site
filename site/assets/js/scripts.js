@@ -289,3 +289,8 @@ Array.prototype.forEach.call(portfolios, function (item) {
   </div>
   `;
 });
+
+function togleMenu() {
+  const menu = document.querySelector("#main-menu");
+  menu.classList.toggle("hidden");
+}
