@@ -28,37 +28,10 @@
 
 </head>
 
-<body>
+<body class="bg-gray-200">
 
     <header>
 
-        <!-- <nav class="flex items-center justify-between flex-wrap bg-gray-800 p-6 fixed w-full z-10 top-0">
-            <div class="flex items-center flex-shrink-0 text-white mr-6">
-                <a class="text-white no-underline hover:text-white hover:no-underline" href="#">
-                    <span class="text-2xl pl-2"><i class="em em-grinning"></i> Brand McBrandface</span>
-                </a>
-            </div>
-            <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block pt-6 lg:pt-0"
-                id="nav-content">
-                <ul class="list-reset lg:flex justify-end flex-1 items-center">
-                    <li class="mr-3">
-                        <a class="inline-block py-2 px-4 text-white no-underline" href="#">Active</a>
-                    </li>
-                    <li class="mr-3">
-                        <a class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-4"
-                            href="#">link</a>
-                    </li>
-                    <li class="mr-3">
-                        <a class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-4"
-                            href="#">link</a>
-                    </li>
-                    <li class="mr-3">
-                        <a class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-4"
-                            href="#">link</a>
-                    </li>
-                </ul>
-            </div>
-        </nav> -->
 
 
 
@@ -87,6 +60,10 @@
                         </a>
                         <a name="desenvolvedor" href=" #desenvolvedor" class="nav-item mx-4 mt-4 text-dark">
                             Desenvolvedor
+                        </a>
+
+                        <a name="sistemas" href="#sistemas" class="nav-item mx-4 mt-4 text-dark">
+                            Sistemas
                         </a>
 
                         <a name="portfolio" href="#portfolio" class="nav-item mx-4 mt-4 text-dark">
@@ -164,202 +141,342 @@
         </div>
     </div>
 
-    <section id="tecnologias" class="py-6">
-        <div class="flex">
-            <div class="w-full justify-center text-center">
-                <h2 class="text-2xl text-center">TECNOLOGIAS</h2>
-            </div>
-        </div>
-        <div class="flex flex-wrap text-center">
-            <div class="w-full sm-:full md:w-1/4 p-6">
-                <div class="painel">
-                    <div class="painel-header">
-                        <i class="fa-3x fas fa-code text-gray-600"></i><br>
-                        <h5 class="text-1xl  text-bold">HTML/CSS</h5>
-                    </div>
-                    <div class="painel-body">
-                        <p>Marcação e de estilos das páginas</p>
+
+    <div class="flex flex-wrap">
+        <div class="w-1/2">
+            <section class="section bg-indigo-100 py-6" id="desenvolvedor">
+                <div class="flex pb-5">
+                    <div class="w-full justify-center text-center">
+                        <h2 class="text-2xl text-center">DESENVOLVEDOR</h2>
                     </div>
                 </div>
-            </div>
-            <div class="w-full sm-:full md:w-1/4 p-6">
-                <div class="painel">
-                    <div class="painel-header">
-                        <i class="fa-3x fab fa-node-js text-green-800"></i><br>
-                        <div class="w-full">
-                            <h5 class="text-1xl  text-bold">NODE</h5>
-                        </div>
-                    </div>
-                    <div class="painel-body">
 
-                        <p>Gerenciamento de pacotes</p>
-                    </div>
-                </div>
-            </div>
-            <div class="w-full sm-:full md:w-1/4 p-6">
-                <div class="painel">
-                    <div class="painel-header">
-                        <i class="fa-3x fab fa-php text-indigo-600"></i><br>
-                        <div class="w-full">
-                            <h5 class="text-1xl  text-bold">PHP</h5>
-                        </div>
-                    </div>
-                    <div class="painel-body">
-
-                        <p>Atualizado e facil hospedagem</p>
-                    </div>
-                </div>
-            </div>
-            <div class="w-full sm-:full md:w-1/4 p-6">
-                <div class="painel">
-                    <div class="painel-header">
-                        <i class="fa-3x fab fa-js text-yellow-500"></i>
-                        <div class="w-full">
-                            <h5 class="text-1xl  text-bold">JAVASCRIPT</h5>
-                        </div>
-                    </div>
-                    <div class="painel-body">
-
-                        <p>Interatividade do sistema</p>
-                    </div>
-                </div>
-            </div>
-            <div class="w-full sm-:full md:w-1/4 p-6">
-                <div class="painel">
-                    <div class="painel-header">
-                        <i class="fa-3x fab fa-vuejs text-blue-400"></i>
-                        <div class="w-full">
-                            <h5 class="text-1xl  text-bold">VUEJS</h5>
-                        </div>
-                    </div>
-                    <div class="painel-body">
-
-                        <p>Frontend VueJs</p>
-                    </div>
-                </div>
-            </div>
-            <div class="w-full sm-:full md:w-1/4 p-6">
-                <div class="painel">
-                    <div class="painel-header">
-                        <i class="fa-3x fab fa-laravel text-red-500"></i>
-                        <div class="w-full">
-                            <h5 class="text-1xl h5 text-bold">LARAVEL</h5>
-                        </div>
-                    </div>
-                    <div class="painel-body">
-
-                        <p>Desenvolvimento de API</p>
-                    </div>
-                </div>
-            </div>
-            <div class="w-full sm-:full md:w-1/4 p-6">
-                <div class="painel">
-                    <div class="painel-header">
-                        <i class="fa-3x fas fa-database text-orange-500"></i>
-                        <div class="w-full">
-                            <h5 class="text-1xl  text-bold">MYSQL/SQL</h5>
-                        </div>
-                    </div>
-                    <div class="painel-body">
-
-                        <p>Gerenciamento de banco de dados</p>
-                    </div>
-                </div>
-            </div>
-            <div class="w-full sm-:full md:w-1/4 p-6">
-                <div class="painel">
-                    <div class="painel-header">
-                        <i class="fa-3x fas fa-cloud text-blue-600"></i>
-                        <div class="w-full">
-                            <h5 class="text-1xl  text-bold">NUVEM</h5>
-                        </div>
-                    </div>
-                    <div class="painel-body">
-
-                        <p>Hospedagem Google Cloud</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section bg-indigo-100 py-6" id="desenvolvedor">
-        <div class="flex pb-5">
-            <div class="w-full justify-center text-center">
-                <h2 class="text-2xl text-center">DESENVOLVEDOR</h2>
-            </div>
-        </div>
-
-        <div class="alvitre-card">
-            <div class="flex m-2 justify-center">
-                <div class="w-auto shadow-lg p-1 light:bg-white dark:bg-gray-900 dark:text-gray-100 light:text-black">
-                    <div class="flex flex-wrap justify-center ">
-                        <div class="w-full sm:w-full md:w-1/2 p-1">
-                            <div class="flex flex-wrap justify-center h-full">
-                                <div class="mt-auto mb-auto">
-                                    <picture class="rounded-full object-none object-center h-64 w-64">
-                                        <source srcset="./assets/img/desenvolvedor/webp/jorge.webp" type="image/webp">
-                                        <source srcset="./assets/img/desenvolvedor/webp/jorge.webp" type="image/jpeg">
-                                        <img class="rounded-full h-56 ml-auto mr-auto"
-                                            src="./assets/img/logo/webp/alvitre.webp" alt="Foto desenvolvedor!">
-                                    </picture>
-                                    <!-- <picture>
-
-                                        <img class="rounded-full object-none object-center h-64 w-64"
-                                            src="https://images.unsplash.com/photo-1511367461989-f85a21fda167?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=889&q=80"
-                                            alt="Img Bio!">
-                                    </picture> -->
-                                </div>
-                            </div>
-                        </div>
-                        <div class=" w-full sm:w-full md:w-3/6 p-1">
-                            <div class="rounded w-full p-2 justify-center items-center text-center shadow 
-                                    h-full light:bg-white dark:bg-gray-800 dark:text-gray-100 light:text-black">
-                                <div class="text-sm">
-                                    <h3 class=" font-bold text-xl  text-center">Jorge Serrano Junior</h3>
-                                </div>
-                                <div
-                                    class="flex flex-wrap w-full h-full border-b border-gray-200 pb-1 text-sm items-center">
-                                    <div class="w-full">
-                                        <div class="mb-5 text-center">
-                                            <p>
-                                                Desenvolver de sistemas full-stack
-                                            </p>
-                                        </div>
-                                        <div>
-                                            <p>Fundador da <span class="text-blue-800 font-bold">Alvitre</span></p>
-
-                                            <p>São Paulo - Brasil</p>
-                                            <br>
-                                            <p>jorgeserranojunior@hotmail.com</p>
-                                            <p>www.alvitre.com.br</p>
-                                            </span>
+                <div class="alvitre-card">
+                    <div class="flex m-2 justify-center">
+                        <div
+                            class="w-auto shadow-lg p-1 light:bg-white dark:bg-gray-900 dark:text-gray-100 light:text-black">
+                            <div class="flex flex-wrap justify-center ">
+                                <div class="w-full sm:w-full md:w-1/2 p-1">
+                                    <div class="flex flex-wrap justify-center h-full">
+                                        <div class="mt-auto mb-auto">
+                                            <picture class="rounded-full object-none object-center h-64 w-64">
+                                                <source srcset="./assets/img/desenvolvedor/webp/jorge.webp"
+                                                    type="image/webp">
+                                                <source srcset="./assets/img/desenvolvedor/webp/jorge.webp"
+                                                    type="image/jpeg">
+                                                <img class="rounded-full h-56 ml-auto mr-auto"
+                                                    src="./assets/img/logo/webp/alvitre.webp" alt="Foto desenvolvedor!">
+                                            </picture>
+                                            <!-- <picture>
+    
+                                            <img class="rounded-full object-none object-center h-64 w-64"
+                                                src="https://images.unsplash.com/photo-1511367461989-f85a21fda167?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=889&q=80"
+                                                alt="Img Bio!">
+                                        </picture> -->
                                         </div>
                                     </div>
-                                    <div class="w-full border-b border-t border-gray-200 m-4 p-2 text-center text-xs">
-                                        <a name="github" href="https://github.com/jserranojunior">
-                                            <button class="bg-blue-800 font-bold text-white rounded p-1" name="github">
-                                                Github
-                                            </button>
-                                        </a>
-                                        <a name="linkedin" href="https://www.linkedin.com/in/jorgeserranojunior/">
-                                            <button class="bg-green-800 font-bold text-white rounded-sm p-1"
-                                                name="linkedin">
-                                                <i class="fab fa-linkedin"></i>Linkedin
-                                            </button>
-                                        </a>
+                                </div>
+                                <div class=" w-full sm:w-full md:w-3/6 p-1">
+                                    <div class="rounded w-full p-2 justify-center items-center text-center shadow 
+                                        h-full light:bg-white dark:bg-gray-800 dark:text-gray-100 light:text-black">
+                                        <div class="text-sm">
+                                            <h3 class=" font-bold text-xl  text-center">Jorge Serrano Junior</h3>
+                                        </div>
+                                        <div
+                                            class="flex flex-wrap w-full h-full border-b border-gray-200 pb-1 text-sm items-center">
+                                            <div class="w-full">
+                                                <div class="mb-5 text-center">
+                                                    <p>
+                                                        Desenvolver de sistemas full-stack
+                                                    </p>
+                                                </div>
+                                                <div>
+                                                    <p>Fundador da <span class="text-blue-800 font-bold">Alvitre</span>
+                                                    </p>
+
+                                                    <p>São Paulo - Brasil</p>
+                                                    <br>
+                                                    <p>jorgeserranojunior@hotmail.com</p>
+                                                    <p>www.alvitre.com.br</p>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="w-full border-b border-t border-gray-200 m-4 p-2 text-center text-xs">
+                                                <a name="github" href="https://github.com/jserranojunior">
+                                                    <button class="bg-blue-800 font-bold text-white rounded p-1"
+                                                        name="github">
+                                                        Github
+                                                    </button>
+                                                </a>
+                                                <a name="linkedin"
+                                                    href="https://www.linkedin.com/in/jorgeserranojunior/">
+                                                    <button class="bg-green-800 font-bold text-white rounded-sm p-1"
+                                                        name="linkedin">
+                                                        <i class="fab fa-linkedin"></i>Linkedin
+                                                    </button>
+                                                </a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
+
+            </section>
+        </div>
+        <div class="w-1/2">
+            <section id="tecnologias" class="py-6">
+                <div class="flex">
+                    <div class="w-full justify-center text-center">
+                        <h2 class="text-2xl text-center">TECNOLOGIAS</h2>
+                    </div>
+                </div>
+                <div class="flex flex-wrap text-center">
+                    <div class="w-full sm-:full md:w-1/4 p-6">
+                        <div class="painel">
+                            <div class="painel-header">
+                                <i class="fa-2x fas fa-code text-gray-600"></i><br>
+                                <h5 class="text-1xl  text-bold">HTML/CSS</h5>
+                            </div>
+                            <div class="painel-body">
+                                <p>Marcação e de estilos das páginas</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full sm-:full md:w-1/4 p-6">
+                        <div class="painel">
+                            <div class="painel-header">
+                                <i class="fa-2x fab fa-node-js text-green-800"></i><br>
+                                <div class="w-full">
+                                    <h5 class="text-1xl  text-bold">NODE</h5>
+                                </div>
+                            </div>
+                            <div class="painel-body">
+
+                                <p>Gerenciamento de pacotes</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full sm-:full md:w-1/4 p-6">
+                        <div class="painel">
+                            <div class="painel-header">
+                                <i class="fa-2x fab fa-php text-indigo-600"></i><br>
+                                <div class="w-full">
+                                    <h5 class="text-1xl  text-bold">PHP</h5>
+                                </div>
+                            </div>
+                            <div class="painel-body">
+
+                                <p>Atualizado e facil hospedagem</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full sm-:full md:w-1/4 p-6">
+                        <div class="painel">
+                            <div class="painel-header">
+                                <i class="fa-2x fab fa-js text-yellow-500"></i>
+                                <div class="w-full">
+                                    <h5 class="text-1xl  text-bold">JAVASCRIPT</h5>
+                                </div>
+                            </div>
+                            <div class="painel-body">
+
+                                <p>Interatividade do sistema</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full sm-:full md:w-1/4 p-6">
+                        <div class="painel">
+                            <div class="painel-header">
+                                <i class="fa-2x fab fa-vuejs text-blue-400"></i>
+                                <div class="w-full">
+                                    <h5 class="text-1xl  text-bold">VUEJS</h5>
+                                </div>
+                            </div>
+                            <div class="painel-body">
+
+                                <p>Frontend VueJs</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full sm-:full md:w-1/4 p-6">
+                        <div class="painel">
+                            <div class="painel-header">
+                                <i class="fa-2x fab fa-laravel text-red-500"></i>
+                                <div class="w-full">
+                                    <h5 class="text-1xl h5 text-bold">LARAVEL</h5>
+                                </div>
+                            </div>
+                            <div class="painel-body">
+
+                                <p>Desenvolvimento de API</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full sm-:full md:w-1/4 p-6">
+                        <div class="painel">
+                            <div class="painel-header">
+                                <i class="fa-2x fas fa-database text-orange-500"></i>
+                                <div class="w-full">
+                                    <h5 class="text-1xl  text-bold">MYSQL/SQL</h5>
+                                </div>
+                            </div>
+                            <div class="painel-body">
+
+                                <p>Gerenciamento de banco de dados</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full sm-:full md:w-1/4 p-6">
+                        <div class="painel">
+                            <div class="painel-header">
+                                <i class="fa-2x fas fa-cloud text-blue-600"></i>
+                                <div class="w-full">
+                                    <h5 class="text-1xl  text-bold">NUVEM</h5>
+                                </div>
+                            </div>
+                            <div class="painel-body">
+
+                                <p>Hospedagem Google Cloud</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <section id="sistemas">
+
+        <div class="flex py-8">
+            <div class="w-full justify-center text-center">
+                <h2 class="text-2xl text-center">Sistemas</h2>
+            </div>
+        </div>
+
+        <div class="flex flex-wrap justify-center">
+            <div class="sm:w-full md:w-1/4 lg:1/4 xl-1/5  px-4">
+                <div class=" bg-white shadow-lg rounded-lg overflow-hidden my-5">
+                    <div class="px-4 py-2">
+                        <h1 class="text-gray-900 font-bold text-2xl uppercase">LS STAR</h1>
+                        <p class="text-gray-600 text-sm mt-1">Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit.
+                            Modi
+                            quos quidem
+                            sequi illum facere recusandae voluptatibus</p>
+                    </div>
+                    <img class="w-full mt-2" src="./assets/img/portfolio/fotos/lsstar-sistema.png" alt="LS Star">
+                    <div class="flex items-center justify-between px-4 py-2 bg-gray-900">
+                        <h1 class="text-gray-200 font-bold text-xl">$129</h1>
+                        <button class="px-3 py-1 bg-gray-200 text-sm text-gray-900 font-semibold rounded">Saiba
+                            Mais</button>
+                    </div>
+                </div>
+            </div>
+            <div class="sm:w-full md:w-1/4 lg:1/4 xl-1/5  px-4">
+                <div class=" bg-white shadow-lg rounded-lg overflow-hidden my-5">
+                    <div class="px-4 py-2">
+                        <h1 class="text-gray-900 font-bold text-2xl uppercase">Megamed</h1>
+                        <p class="text-gray-600 text-sm mt-1">Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit.
+                            Modi
+                            quos quidem
+                            sequi illum facere recusandae voluptatibus</p>
+                    </div>
+                    <img class="w-full mt-2" src="./assets/img/portfolio/fotos/megamed.png" alt="MEGAMED">
+                    <div class="flex items-center justify-between px-4 py-2 bg-gray-900">
+                        <h1 class="text-gray-200 font-bold text-xl">$129</h1>
+                        <button class="px-3 py-1 bg-gray-200 text-sm text-gray-900 font-semibold rounded">Saiba
+                            Mais</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sm:w-full md:w-1/4 lg:1/4 xl-1/5  px-4">
+                <div class=" bg-white shadow-lg rounded-lg overflow-hidden my-5">
+                    <div class="px-4 py-2">
+                        <h1 class="text-gray-900 font-bold text-2xl uppercase">Conta Smart</h1>
+                        <p class="text-gray-600 text-sm mt-1">Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit.
+                            Modi
+                            quos quidem
+                            sequi illum facere recusandae voluptatibus</p>
+                    </div>
+                    <img class="w-full mt-2" src="./assets/img/portfolio/fotos/contadigital.png" alt="LS Star">
+                    <div class="flex items-center justify-between px-4 py-2 bg-gray-900">
+                        <h1 class="text-gray-200 font-bold text-xl">$129</h1>
+                        <button class="px-3 py-1 bg-gray-200 text-sm text-gray-900 font-semibold rounded">Saiba
+                            Mais</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex flex-wrap justify-center">
+            <div class="sm:w-full md:w-1/4 lg:1/4 xl-1/5  px-4">
+                <div class=" bg-white shadow-lg rounded-lg overflow-hidden my-5">
+                    <div class="px-4 py-2">
+                        <h1 class="text-gray-900 font-bold text-2xl uppercase">Vd Lap</h1>
+                        <p class="text-gray-600 text-sm mt-1">Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit.
+                            Modi
+                            quos quidem
+                            sequi illum facere recusandae voluptatibus</p>
+                    </div>
+                    <img class="w-full mt-2" src="./assets/img/portfolio/fotos/vdlap-financeiro.png" alt="LS Star">
+                    <div class="flex items-center justify-between px-4 py-2 bg-gray-900">
+                        <h1 class="text-gray-200 font-bold text-xl">$129</h1>
+                        <button class="px-3 py-1 bg-gray-200 text-sm text-gray-900 font-semibold rounded">Saiba
+                            Mais</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sm:w-full md:w-1/4 lg:1/4 xl-1/5  px-4">
+                <div class=" bg-white shadow-lg rounded-lg overflow-hidden my-5">
+                    <div class="px-4 py-2">
+                        <h1 class="text-gray-900 font-bold text-2xl uppercase">Vd Lap</h1>
+                        <p class="text-gray-600 text-sm mt-1">Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit.
+                            Modi
+                            quos quidem
+                            sequi illum facere recusandae voluptatibus</p>
+                    </div>
+                    <img class="w-full mt-2" src="./assets/img/portfolio/fotos/vdlap-financeiro.png" alt="LS Star">
+                    <div class="flex items-center justify-between px-4 py-2 bg-gray-900">
+                        <h1 class="text-gray-200 font-bold text-xl">$129</h1>
+                        <button class="px-3 py-1 bg-gray-200 text-sm text-gray-900 font-semibold rounded">Saiba
+                            Mais</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sm:w-full md:w-1/4 lg:1/4 xl-1/5  px-4">
+                <div class=" bg-white shadow-lg rounded-lg overflow-hidden my-5">
+                    <div class="px-4 py-2">
+                        <h1 class="text-gray-900 font-bold text-2xl uppercase">Vd Lap</h1>
+                        <p class="text-gray-600 text-sm mt-1">Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit.
+                            Modi
+                            quos quidem
+                            sequi illum facere recusandae voluptatibus</p>
+                    </div>
+                    <img class="w-full mt-2" src="./assets/img/portfolio/fotos/vdlap-financeiro.png" alt="LS Star">
+                    <div class="flex items-center justify-between px-4 py-2 bg-gray-900">
+                        <h1 class="text-gray-200 font-bold text-xl">$129</h1>
+                        <button class="px-3 py-1 bg-gray-200 text-sm text-gray-900 font-semibold rounded">Saiba
+                            Mais</button>
+                    </div>
+                </div>
             </div>
         </div>
 
 
     </section>
-
 
 
     <section id="portfolio">
@@ -373,9 +490,6 @@
         <div class="flex flex-wrap justify-center ">
             <div class="m-1" id="todos" onClick="changePortfolio('todos')">
                 <a>Todos</a>
-            </div>
-            <div class="m-1" id="pictures" onClick="changePortfolio('sistema')">
-                <a>Sistemas</a>
             </div>
             <div class="m-1" id="sites" onClick="changePortfolio('site')">
                 <a>Sites</a>

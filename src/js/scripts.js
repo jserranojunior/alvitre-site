@@ -202,42 +202,42 @@ var $portfolio = document.querySelector(".flex-portfolio"),
       png: "./assets/img/portfolio/thumbnail/png/vitastiq.png",
       tipo: "site",
     },
-    {
-      nome: "lsstar-sistema",
-      webp: "./assets/img/portfolio/thumbnail/webp/lsstar-sistema.webp",
-      png: "./assets/img/portfolio/thumbnail/png/lsstar-sistema.png",
-      tipo: "sistema",
-    },
-    {
-      nome: "vdlap-financeiro",
-      webp: "./assets/img/portfolio/thumbnail/webp/vdlap-financeiro.webp",
-      png: "./assets/img/portfolio/thumbnail/png/vdlap-financeiro.png",
-      tipo: "sistema",
-    },
-    {
-      nome: "vdlap",
-      webp: "./assets/img/portfolio/thumbnail/webp/vdlap.webp",
-      png: "./assets/img/portfolio/thumbnail/png/vdlap.png",
-      tipo: "sistema",
-    },
-    {
-      nome: "megamed",
-      webp: "./assets/img/portfolio/thumbnail/webp/megamed.webp",
-      png: "./assets/img/portfolio/thumbnail/png/megamed.png",
-      tipo: "sistema",
-    },
-    {
-      nome: "megamed-estoque",
-      webp: "./assets/img/portfolio/thumbnail/webp/megamed-estoque.webp",
-      png: "./assets/img/portfolio/thumbnail/png/megamed-estoque.png",
-      tipo: "sistema",
-    },
-    {
-      nome: "contadigital",
-      webp: "./assets/img/portfolio/thumbnail/webp/contadigital.webp",
-      png: "./assets/img/portfolio/thumbnail/png/contadigital.png",
-      tipo: "sistema",
-    },
+    // {
+    //   nome: "lsstar-sistema",
+    //   webp: "./assets/img/portfolio/thumbnail/webp/lsstar-sistema.webp",
+    //   png: "./assets/img/portfolio/thumbnail/png/lsstar-sistema.png",
+    //   tipo: "sistema",
+    // },
+    // {
+    //   nome: "vdlap-financeiro",
+    //   webp: "./assets/img/portfolio/thumbnail/webp/vdlap-financeiro.webp",
+    //   png: "./assets/img/portfolio/thumbnail/png/vdlap-financeiro.png",
+    //   tipo: "sistema",
+    // },
+    // {
+    //   nome: "vdlap",
+    //   webp: "./assets/img/portfolio/thumbnail/webp/vdlap.webp",
+    //   png: "./assets/img/portfolio/thumbnail/png/vdlap.png",
+    //   tipo: "sistema",
+    // },
+    // {
+    //   nome: "megamed",
+    //   webp: "./assets/img/portfolio/thumbnail/webp/megamed.webp",
+    //   png: "./assets/img/portfolio/thumbnail/png/megamed.png",
+    //   tipo: "sistema",
+    // },
+    // {
+    //   nome: "megamed-estoque",
+    //   webp: "./assets/img/portfolio/thumbnail/webp/megamed-estoque.webp",
+    //   png: "./assets/img/portfolio/thumbnail/png/megamed-estoque.png",
+    //   tipo: "sistema",
+    // },
+    // {
+    //   nome: "contadigital",
+    //   webp: "./assets/img/portfolio/thumbnail/webp/contadigital.webp",
+    //   png: "./assets/img/portfolio/thumbnail/png/contadigital.png",
+    //   tipo: "sistema",
+    // },
   ];
 function changePortfolio(className) {
   const portSelected = document.getElementsByClassName(className),
@@ -273,7 +273,7 @@ function navBarToggle() {
 // }
 Array.prototype.forEach.call(portfolios, function (item) {
   $portfolio.innerHTML += `
-  <div class="w-full sm:w-full md:w-4/12 p-2  portfolio ${item.tipo}">
+  <div class="w-full sm:w-full md:w-1/5 p-2  portfolio ${item.tipo}">
     <div class="painel p-4 m-2 shadow-md border-t">
       <div class="painel-content">
  
