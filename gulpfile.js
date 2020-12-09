@@ -3,18 +3,25 @@
 
 var gulp = require("gulp");
 
-gulp.task("cssconcat", function () {
-  const concat = require("gulp-concat");
+// gulp.task("cssconcat", function () {
+//   const concat = require("gulp-concat");
+//   const cleanCSS = require("gulp-clean-css");
+
+//   return gulp
+//     .src(["./src/css/style.css", "./src/css/tailwindpurge/tailwindfull.css"])
+//     .pipe(concat("style-min.css"))
+//     .pipe(cleanCSS(cleanCSS({ compatibility: "ie8" })))
+//     .pipe(gulp.dest("./dist/assets/css"));
+// });
+
+gulp.task("css", function () {
+  // const concat = require("gulp-concat");
   const cleanCSS = require("gulp-clean-css");
 
   return gulp
-    .src([
-      "./src/styles/style.css",
-      "./src/styles/tailwindpurge/tailwindfull.css",
-    ])
-    .pipe(concat("style-min.css"))
+    .src(["./src/assets/css/*.css"])
     .pipe(cleanCSS(cleanCSS({ compatibility: "ie8" })))
-    .pipe(gulp.dest("./site/assets/css"));
+    .pipe(gulp.dest("./dist/assets/css"));
 });
 
 gulp.task("purge", function () {
@@ -48,20 +55,22 @@ gulp.task("purge", function () {
 });
 
 gulp.task("js", function () {
-  const minify = require("gulp-minify");
+  const uglify = require("gulp-uglify-es").default;
   return gulp
-    .src(["./src/js/*.js"])
-    .pipe(minify())
-    .pipe(gulp.dest("./site/assets/js"));
+    .src(["./src/assets/js/*.js"])
+    .pipe(uglify())
+    .pipe(gulp.dest("./dist/assets/js"));
 });
 
 gulp.task("html", () => {
   const htmlmin = require("gulp-htmlmin");
+  var removeHtmlComments = require("gulp-remove-html-comments");
 
   return gulp
-    .src("./src/pages/*.html")
+    .src("./src/*.html")
     .pipe(htmlmin({ collapseWhitespace: true }))
-    .pipe(gulp.dest("./site"));
+    .pipe(removeHtmlComments())
+    .pipe(gulp.dest("./dist"));
 });
 
-gulp.task("tail", gulp.parallel("purge", "cssconcat"));
+gulp.task("tail", gulp.parallel("purge", "css"));

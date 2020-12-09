@@ -6,6 +6,8 @@
   "scripts": {
     "test": "npm run test",
     "tail": "npx tailwindcss build ./src/styles/tailwind.css -o ./src/styles/tailwindfull.css && gulp tail",
+    "dev-docker": "cd server && docker-compose -f docker-compose.dev.yml up -d",
+    "prod-docker": "cd server && docker-compose -f docker-compose.prod.yml up -d",
     "js": "gulp js",
     "purge": "gulp purge",
     "css": "gulp css",
@@ -20,6 +22,8 @@
     "gulp-htmlmin": "^5.0.1",
     "gulp-postcss": "^8.0.0",
     "gulp-purgecss": "^2.3.0",
+    "gulp-remove-html-comments": "^1.0.1",
+    "gulp-uglify-es": "^2.0.0",
     "postcss-import": "^12.0.1",
     "tailwindcss": "^1.6.2"
   },
