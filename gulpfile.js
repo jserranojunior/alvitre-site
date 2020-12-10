@@ -1,5 +1,6 @@
 var gulp = require("gulp");
 const browserSync = require("browser-sync").create();
+const image = require("gulp-image");
 
 gulp.task("purge", function () {
   const atimport = require("postcss-import");
@@ -76,6 +77,22 @@ function watch() {
   gulp.watch("./src/assets/css/*.css", css);
 }
 
+function img() {
+  return gulp
+    .src([
+      "./src/assets/img/*/*",
+      "./src/assets/img/*/*/*",
+      "./src/assets/img/*/*/*/*",
+    ])
+    .pipe(
+      image({
+        pngquant: true,
+      })
+    )
+    .pipe(gulp.dest("./dist/assets/img"));
+}
+
 exports.html = html;
 exports.js = js;
 exports.watch = watch;
+exports.img = img;
