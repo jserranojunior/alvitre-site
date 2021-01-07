@@ -49,7 +49,7 @@ module.exports = {
       whitelist: ["bg-red-500", "px-4"],
     },
   },
-
+  darkMode: "class",
   plugins: [
     function ({ addBase, config }) {
       addBase({

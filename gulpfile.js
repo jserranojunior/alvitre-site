@@ -34,7 +34,6 @@ gulp.task("purge", function () {
 
 function css() {
   const cleanCSS = require("gulp-clean-css");
-
   return gulp
     .src(["./src/assets/css/*.css"])
     .pipe(cleanCSS(cleanCSS({ compatibility: "ie8" })))
@@ -96,3 +95,4 @@ exports.html = html;
 exports.js = js;
 exports.watch = watch;
 exports.img = img;
+exports.css = css;
