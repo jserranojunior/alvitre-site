@@ -1,4 +1,4 @@
-var CACHE_NAME = "v1.2.9",
+var CACHE_NAME = "v1.3.0",
   urlsToCache = ["/"];
 self.addEventListener("install", function (e) {
   e.waitUntil(caches.open(CACHE_NAME).then((e) => e.addAll(urlsToCache)));

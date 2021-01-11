@@ -253,6 +253,7 @@ function changePortfolio(className) {
         className.classList.remove("hidden");
       }));
 }
+
 function modalToggle() {
   document.querySelector("html").classList.toggle("is-clipped"),
     document.querySelector(".modal").classList.toggle("is-active");
@@ -273,14 +274,14 @@ function navBarToggle() {
 Array.prototype.forEach.call(portfolios, function (item) {
   $portfolio.innerHTML += `
   <div class="w-full sm:w-full md:w-1/5 p-2  portfolio ${item.tipo}">
-    <div class="painel p-4 m-2 shadow-md border-t">
+    <div class="painel p-1 m-2 shadow-inner rounded-lg bg-gray-700">
       <div class="painel-content">
  
       <picture>
       <source srcset="${item.webp}" type="image/webp"></source>
       <source srcset="${item.png}" type="image/png"></source>
 
-      <img class="" src="${item.webp}" alt="${item.nome}">
+      <img class="rounded-lg" src="${item.webp}" alt="${item.nome}">
 
       </picture> 
       </div>
@@ -293,3 +294,28 @@ function togleMenu() {
   const menu = document.querySelector("#main-menu");
   menu.classList.toggle("hidden");
 }
+
+function isMobile() {
+  var userAgent = navigator.userAgent.toLowerCase();
+  if (
+    userAgent.search(
+      /(android|avantgo|blackberry|bolt|boost|cricket|docomo|fone|hiptop|mini|mobi|palm|phone|pie|tablet|up\.browser|up\.link|webos|wos)/i
+    ) != -1
+  )
+    return true;
+}
+
+function verifyDevice() {
+  const whatsapp = document.querySelectorAll(".whatsapp");
+  if (isMobile()) {
+    whatsapp.forEach((item) => {
+      item = item.href = "whatsapp://send?phone=5511946439695";
+    });
+  } else {
+    whatsapp.forEach((item) => {
+      item = item.href = "https://web.whatsapp.com/send?phone=5511946439695";
+    });
+  }
+}
+
+verifyDevice();
