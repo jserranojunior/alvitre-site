@@ -2,7 +2,7 @@
 
 @tailwind components;
 .painel {
-  @apply bg-white rounded w-full px-3 py-2 shadow bg-gray-800 shadow-lg shadow-outline;
+  @apply rounded w-full px-3 py-2 shadow bg-gray-800 shadow-lg shadow-outline;
 }
 .painel-header {
   @apply text-center border-b border-gray-200 py-2;
