@@ -296,13 +296,19 @@ function togleMenu() {
 }
 
 function isMobile() {
-  var userAgent = navigator.userAgent.toLowerCase();
   if (
-    userAgent.search(
-      /(android|avantgo|blackberry|bolt|boost|cricket|docomo|fone|hiptop|mini|mobi|palm|phone|pie|tablet|up\.browser|up\.link|webos|wos)/i
-    ) != -1
-  )
-    return true;
+    navigator.userAgent.match(/Android/i) ||
+    navigator.userAgent.match(/webOS/i) ||
+    navigator.userAgent.match(/iPhone/i) ||
+    navigator.userAgent.match(/iPad/i) ||
+    navigator.userAgent.match(/iPod/i) ||
+    navigator.userAgent.match(/BlackBerry/i) ||
+    navigator.userAgent.match(/Windows Phone/i)
+  ) {
+    return true; // está utilizando celular
+  } else {
+    return false; // não é celular
+  }
 }
 
 function verifyDevice() {
