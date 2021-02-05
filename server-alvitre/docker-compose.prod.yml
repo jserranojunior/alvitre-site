@@ -12,6 +12,8 @@ services:
       - "./vhost.conf:/opt/docker/etc/httpd/vhost.conf"
       - "../dist:/var/www/html/alvitre"
       - "../dist:/app/alvitre"
+      ports: 
+        - 5454:80
       restart: always
       labels:
         - "traefik.enable=true"
