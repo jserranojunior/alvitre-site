@@ -11,6 +11,7 @@ services:
       volumes:
       - "./vhost.conf:/opt/docker/etc/httpd/vhost.conf"
       - "../dist:/var/www/html/alvitre"
+      - "../dist:/app/alvitre"
       restart: always
       labels:
         - "traefik.enable=true"
