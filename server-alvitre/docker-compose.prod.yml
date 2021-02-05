@@ -9,7 +9,6 @@ services:
       image: "webdevops/apache"
       restart: always
       volumes:
-      - ../dist:/usr/share/nginx/html
       - "./vhost.conf:/opt/docker/etc/httpd/vhost.conf"
       - "../dist:/var/www/html/alvitre"
       restart: always
