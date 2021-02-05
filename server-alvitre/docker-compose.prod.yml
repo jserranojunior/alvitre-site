@@ -4,32 +4,18 @@ networks:
   internal:
     driver: bridge
 services:
-    apachealvitre:
-      container_name: "apachealvitre"
-      image: "webdevops/apache"
-      restart: always
-      volumes:
+  apachealvitre:
+    container_name: "apachealvitre"
+    image: webdevops/php-apache:7.4
+    tty: true
+    restart: always
+    volumes:
       - "./vhost.conf:/opt/docker/etc/httpd/vhost.conf"
       - "../dist:/var/www/html/alvitre"
-      - "../dist:/app/alvitre"
-      ports: 
-        - 5454:80
-      restart: always
-      labels:
-        - "traefik.enable=true"
-        - "traefik.http.routers.alvitre.rule=Host(`alvitre.com.br`,`www.alvitre.com.br`)"
-        - "traefik.http.services.alvitre.loadbalancer.server.port=80"
-  # apache:
-  #   container_name: "nginx_alvitre"
-  #   image: "webdevops/nginx"
-  #   restart: always
-  #   volumes:
-  #     - "../dist:/app/alvitre"
-  #   networks:
-  #     - internal
-  #   labels:
-  #     - "traefik.enable=true"
-  #     - "traefik.http.routers.alvitre.rule=Host(`alvitre.net`,`www.alvitre.net`)"
-  #     - "traefik.http.services.alvitre.loadbalancer.server.port=80"
-
+    networks:
+     - internal
+    labels:
+     - "traefik.enable=true"
+     - "traefik.http.routers.sitealvitre.rule=Host(`www.alvitre.com.br`,`alvitre.com.br`)"
+     - "traefik.http.services.sitealvitre.loadbalancer.server.port=80"
 
