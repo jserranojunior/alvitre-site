@@ -15,7 +15,7 @@ services:
       - internal
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.local.rule=Host(`alvitre.net`,`www.alvitre.net`)"
+      - "traefik.http.routers.local.rule=Host(`alvitre.com.br`,`www.alvitre.com.br`)"
       - "traefik.http.services.local.loadbalancer.server.port=80"
 
   # apache_teste:

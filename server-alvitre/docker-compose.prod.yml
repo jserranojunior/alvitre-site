@@ -4,17 +4,18 @@ networks:
   internal:
     driver: bridge
 services:
-    web:
-      image: nginx
-      container_name: "nginx_alvitre"
+    apachealvitre:
+      container_name: "apachealvitre"
+      image: "webdevops/apache"
+      restart: always
       volumes:
       - ../dist:/usr/share/nginx/html
+      - "./vhost.conf:/opt/docker/etc/httpd/vhost.conf"
+      - "../dist:/var/www/html/alvitre"
       restart: always
-      ports:
-      - "2097:80"
       labels:
         - "traefik.enable=true"
-        - "traefik.http.routers.alvitre.rule=Host(`alvitre.net`,`www.alvitre.net`)"
+        - "traefik.http.routers.alvitre.rule=Host(`alvitre.com.br`,`www.alvitre.com.br`)"
         - "traefik.http.services.alvitre.loadbalancer.server.port=80"
   # apache:
   #   container_name: "nginx_alvitre"
