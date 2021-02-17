@@ -313,18 +313,14 @@ function isMobile() {
 
 function verifyDevice() {
   let whatsapp = document.querySelectorAll(".whatsapp");
-  console.log(whatsapp);
-
   if (isMobile()) {
     whatsapp.forEach((item) => {
       item.href = "whatsapp://send?phone=5511946439695";
-      console.log(item.href);
     });
     return whatsapp;
   } else {
     whatsapp.forEach((item) => {
       item = item.href = "https://web.whatsapp.com/send?phone=5511946439695";
-      console.log(item.href);
     });
     return whatsapp;
   }
