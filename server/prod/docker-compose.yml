@@ -9,7 +9,7 @@ services:
     image: webdevops/apache
     restart: always
     volumes:
-      - "./vhost.conf:/opt/docker/etc/httpd/vhost.conf"
+      # - "./vhost.conf:/opt/docker/etc/httpd/vhost.conf"
       - "../../src:/app"
     networks:
      - internal
