@@ -10,7 +10,7 @@ services:
     restart: always
     volumes:
       - "./vhost.conf:/opt/docker/etc/httpd/vhost.conf"
-      - "../../dist:/var/www/html/alvitre"
+      - "../../src:/app"
     networks:
      - internal
     labels:
