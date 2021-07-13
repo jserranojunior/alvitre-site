@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  apachealvitre:
+    container_name: "apachealvitre"
+    image: webdevops/apache
+    restart: always
+    ports:
+      - 81:80
+    volumes:
+      - "${APPPATH}:/app"
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.sitealvitre.rule=Host(`www.${DOMAIN}`,`${DOMAIN}`)"
+      - "traefik.http.services.sitealvitre.loadbalancer.server.port=80"
