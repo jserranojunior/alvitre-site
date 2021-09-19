@@ -1,0 +1,22 @@
+version: "3"
+
+networks:
+  stack_ponte:
+    external: true
+
+services:
+  frontend_alvitre:
+    container_name: "frontend_alvitre"
+    image: "node:lts-alpine"
+    working_dir: /app
+    volumes:
+      - "${PATHPESSOAL}/alvitre/front:/app"
+    command: "yarn dev"
+    networks:
+      - stack_ponte
+    ports:
+      - "3100:3000"
+    labels:
+      - "traefik.enable=true"
+      - traefik.http.routers.frontalvitre.rule=Host(`frontalvitre.${DOMAIN}`)
+      - traefik.http.services.frontalvitre.loadbalancer.server.port=3000

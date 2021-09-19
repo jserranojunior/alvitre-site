@@ -1,0 +1,23 @@
+{
+  "name": "Alvitre",
+  "short_name": "Alvitre",
+  "description": "Desenvolvimento e Inovação",
+  "start_url": ".",
+  "background_color": "#fff",
+  "lang": "Portuguese",
+  "theme_color": "#007fd4",
+  "display": "fullscreen",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "../src/assets/img/logo/favicon/alvitre-android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "../src/assets/img/logo/favicon/alvitre-android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}
