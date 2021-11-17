@@ -28,7 +28,7 @@
                   <div class="text-sm p-3 btn-install-pwa cursor-pointer">
                     <span class="text-left font-bold">Adicione a tela inicial</span>
                     <div class="toast-body-tail">
-                      <div class="text-gray-600 tracking-tight">
+                      <div class="text-gray-600 tracking-tight dark:text-gray-200">
                         Disponível para instalação
                       </div>
                     </div>
@@ -57,12 +57,31 @@
         </div>
       </div>
     </div>
-    <Sistemas />
+
+    <div>
+      <Sistemas />
+      <Servicos />
+      <div class="flex dark:bg-gray-600">
+        <div class="sm:w-full md:w-full lg:w-1/2">
+          <Developer />
+        </div>
+        <div class="sm:w-full md:w-full lg:w-1/2 px-2">
+          <Tecnologias />
+        </div>
+      </div>
+      <Portfolio />
+    </div>
   </div>
 </template>
 
 <script>
 import Sistemas from "./components/Sistemas.vue";
+import Servicos from "./components/Servicos.vue";
+import Developer from "./components/Developer.vue";
+import Tecnologias from "./components/Tecnologias.vue";
+
+import Portfolio from "./components/Portfolio.vue";
+
 // import { inject, onBeforeMount } from "vue";
 import { reactive } from "vue";
 import logo from "@/assets/img/logo/webp/alvitre.webp";
@@ -70,6 +89,10 @@ import logoPng from "@/assets/img/logo/png/alvitre.png";
 export default {
   components: {
     Sistemas,
+    Servicos,
+    Developer,
+    Tecnologias,
+    Portfolio,
   },
   // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
   setup() {
@@ -78,3 +101,9 @@ export default {
   },
 };
 </script>
+<style lang="css">
+#header {
+  background: #e8008d;
+  background: linear-gradient(90deg, #e8008d7a 0, #05c4feb8 47%, #116deb8c 100%);
+}
+</style>

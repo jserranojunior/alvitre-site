@@ -1,5 +1,5 @@
 <template>
-  <footer>
+  <div>
     <div class="flex">
       <div class="w-full text-center">
         <a href="https://www.facebook.com/alvitrenet/?ref=br_rs">
@@ -28,7 +28,7 @@
         </p>
       </div>
     </div>
-  </footer>
+  </div>
 </template>
 
 <script>

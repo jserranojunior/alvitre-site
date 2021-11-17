@@ -5,16 +5,21 @@
         <router-view></router-view>
       </div>
     </template>
+    <template #footer>
+      <Footer></Footer>
+    </template>
   </SliferLayout>
 </template>
 
 <script>
 import SliferLayout from "./views/layouts/SliferLayout.vue";
+import Footer from "./views/layouts/Footer.vue";
 import { Provides } from "./provides/index";
 export default {
   name: "App",
   components: {
     SliferLayout,
+    Footer,
   },
 
   // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types

@@ -70,7 +70,7 @@
           </div>
           <img
             class="w-full mt-2 rounded"
-            src="./assets/img/portfolio/fotos/acolher.png"
+            src="@/assets/img/portfolio/fotos/acolher.png"
             alt="LS Star"
           />
           <div class="flex items-center justify-between px-4 py-2 bg-blue-200">
@@ -92,7 +92,7 @@
           </div>
           <img
             class="w-full mt-2 rounded-md"
-            src="./assets/img/portfolio/fotos/megamed.png"
+            src="@/assets/img/portfolio/fotos/megamed.png"
             alt="MEGAMED"
           />
           <div class="flex items-center justify-between px-4 py-2 bg-blue-600">
@@ -114,7 +114,7 @@
           </div>
           <img
             class="w-full mt-2 rounded-md image"
-            src="./assets/img/portfolio/fotos/vdlap-financeiro.png"
+            src="@/assets/img/portfolio/fotos/vdlap-financeiro.png"
             alt="LS Star"
           />
           <div class="flex items-center justify-between px-4 py-2 bg-red-600">

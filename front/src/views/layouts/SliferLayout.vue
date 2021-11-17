@@ -18,7 +18,7 @@
         </div>
       </div>
       <!-- sm:w-8/12 md:w-10/12 lg:w-11/12 xl:w-11/12  -->
-      <div class="w-full p-2 bg-albank-1 dark:bg-gray-600 dark:text-gray-100">
+      <div class="w-full dark:bg-gray-600 dark:text-gray-100">
         <slot name="mainpage"></slot>
       </div>
     </div>
