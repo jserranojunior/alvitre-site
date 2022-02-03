@@ -10,18 +10,20 @@
         <div class="w-1/2 sm:w-1/2 md:w-1/4 p-2">
           <div class="painel dark:bg-gray-800">
             <div class="painel-header">
-              <i class="fa-2x fas fa-code text-gray-600"></i><br />
+              <i class="fa-2x fas fa-code text-gray-600"></i>
+              <br />
               <h5 class="text-1xl text-bold">HTML/CSS</h5>
             </div>
             <!-- <div class="painel-body">
                                               <p>Marcação e de estilos das páginas</p>
-                                          </div> -->
+            </div>-->
           </div>
         </div>
         <div class="w-1/2 sm:w-1/2 md:w-1/4 p-2">
           <div class="painel dark:bg-gray-800">
             <div class="painel-header">
-              <i class="fa-2x fab fa-node-js text-green-800"></i><br />
+              <i class="fa-2x fab fa-node-js text-green-800"></i>
+              <br />
               <div class="w-full">
                 <h5 class="text-1xl text-bold">NODE</h5>
               </div>
@@ -29,13 +31,14 @@
             <!-- <div class="painel-body">
               
                                               <p>Gerenciamento de pacotes</p>
-                                          </div> -->
+            </div>-->
           </div>
         </div>
         <div class="w-1/2 sm:w-1/2 md:w-1/4 p-2">
           <div class="painel dark:bg-gray-800">
             <div class="painel-header">
-              <i class="fa-2x fab fa-php text-indigo-600"></i><br />
+              <i class="fa-2x fab fa-php text-indigo-600"></i>
+              <br />
               <div class="w-full">
                 <h5 class="text-1xl text-bold">PHP</h5>
               </div>
@@ -43,7 +46,7 @@
             <!-- <div class="painel-body">
               
                                               <p>Atualizado e facil hospedagem</p>
-                                          </div> -->
+            </div>-->
           </div>
         </div>
         <div class="w-1/2 sm:w-1/2 md:w-1/4 p-2">
@@ -57,7 +60,7 @@
             <!-- <div class="painel-body">
               
                                               <p>Interatividade do sistema</p>
-                                          </div> -->
+            </div>-->
           </div>
         </div>
         <div class="w-1/2 sm:w-1/2 md:w-1/4 p-2">
@@ -71,7 +74,7 @@
             <!-- <div class="painel-body">
               
                                               <p>Frontend VueJs</p>
-                                          </div> -->
+            </div>-->
           </div>
         </div>
         <div class="w-1/2 sm:w-1/2 md:w-1/4 p-2">
@@ -85,7 +88,7 @@
             <!-- <div class="painel-body">
               
                                               <p>Desenvolvimento de API</p>
-                                          </div> -->
+            </div>-->
           </div>
         </div>
         <div class="w-1/2 sm:w-1/2 md:w-1/4 p-2">
@@ -99,7 +102,7 @@
             <!-- <div class="painel-body">
               
                                               <p>Gerenciamento de banco de dados</p>
-                                          </div> -->
+            </div>-->
           </div>
         </div>
         <div class="w-1/2 sm:w-1/2 md:w-1/4 p-2">
@@ -113,7 +116,7 @@
             <!-- <div class="painel-body">
               
                                               <p>Hospedagem Google Cloud</p>
-                                          </div> -->
+            </div>-->
           </div>
         </div>
 
@@ -128,7 +131,7 @@
             <!-- <div class="painel-body">
                                   
                                                                   <p>Hospedagem Google Cloud</p>
-                                                              </div> -->
+            </div>-->
           </div>
         </div>
 
@@ -143,7 +146,7 @@
             <!-- <div class="painel-body">
                                                       
                                                                                       <p>Hospedagem Google Cloud</p>
-                                                                                  </div> -->
+            </div>-->
           </div>
         </div>
 
@@ -158,7 +161,7 @@
             <!-- <div class="painel-body">
                                                                           
                                                                                                           <p>Hospedagem Google Cloud</p>
-                                                                                                      </div> -->
+            </div>-->
           </div>
         </div>
 
@@ -173,7 +176,7 @@
             <!-- <div class="painel-body">
                                                                                               
                                                                                                                               <p>Hospedagem Google Cloud</p>
-                                                                                                                          </div> -->
+            </div>-->
           </div>
         </div>
       </div>
