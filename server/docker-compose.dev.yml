@@ -7,16 +7,15 @@ networks:
 services:
   frontend_alvitre:
     container_name: "frontend_alvitre"
-    image: "node:lts-alpine"
+    image: webdevops/apache
     working_dir: /app
     volumes:
-      - "${PATHPESSOAL}/alvitre/front:/app"
-    command: "yarn dev"
+      - "${PATHPESSOAL}/alvitre-site/front/src:/app"
     networks:
       - stack_ponte
     ports:
-      - "3100:3000"
+      - "3100:80"
     labels:
       - "traefik.enable=true"
       - traefik.http.routers.frontalvitre.rule=Host(`frontalvitre.${DOMAIN}`)
-      - traefik.http.services.frontalvitre.loadbalancer.server.port=3000
+      - traefik.http.services.frontalvitre.loadbalancer.server.port=80

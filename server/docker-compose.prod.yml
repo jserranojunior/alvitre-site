@@ -5,17 +5,18 @@ networks:
     external: true
 
 services:
-  apachealvitre:
-    container_name: "apachealvitre"
+  frontend_alvitre:
+    container_name: "alvitre"
     image: webdevops/apache
+    working_dir: /app
+    volumes:
+      - "${PATHPESSOAL}/alvitre-site/front/src:/app"
     networks:
       - stack_ponte
-    restart: always
     ports:
-      - 81:80
-    volumes:
-      - "${PATH}/alvitre/old/dist:/app"
+      - "3100:80"
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.sitealvitre.rule=Host(`www.${DOMAIN}`,`${DOMAIN}`)"
-      - "traefik.http.services.sitealvitre.loadbalancer.server.port=80"
+      - traefik.http.routers.frontalvitre.rule=Host(`frontalvitre.${DOMAIN}`)
+      - traefik.http.services.frontalvitre.loadbalancer.server.port=80
+      - "traefik.http.routers.frontalvitre.tls.certresolver=le"
