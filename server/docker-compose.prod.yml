@@ -17,6 +17,6 @@ services:
       - "3100:80"
     labels:
       - "traefik.enable=true"
-      - traefik.http.routers.frontalvitre.rule=Host(`frontalvitre.${DOMAIN}`)
-      - traefik.http.services.frontalvitre.loadbalancer.server.port=80
-      - "traefik.http.routers.frontalvitre.tls.certresolver=le"
+      - "traefik.http.routers.sitealvitre.rule=Host(`www.${DOMAIN}`,`${DOMAIN}`)"
+      - traefik.http.services.sitealvitre.loadbalancer.server.port=80
+      - "traefik.http.routers.sitealvitre.tls.certresolver=le"
