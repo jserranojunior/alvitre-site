@@ -348,7 +348,7 @@ export default () => {
               <picture>
                 <source srcset="${item.webp}" type="image/webp" />
                 <source srcset="${item.png}" type="image/png" />
-                <img class="rounded-lg" src="${item.png}" alt="${item.nome}" />
+                <img width="100%" height="100" class="rounded-lg" src="${item.png}" alt="${item.nome}" />
               </picture>
             </div>          
           </div>

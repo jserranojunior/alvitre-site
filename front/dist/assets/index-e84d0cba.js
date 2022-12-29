@@ -5,7 +5,7 @@
               <picture>
                 <source srcset="${e.webp}" type="image/webp" />
                 <source srcset="${e.png}" type="image/png" />
-                <img class="rounded-lg" src="${e.png}" alt="${e.nome}" />
+                <img width="100%" height="100" class="rounded-lg" src="${e.png}" alt="${e.nome}" />
               </picture>
             </div>          
           </div>
