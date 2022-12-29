@@ -10,7 +10,7 @@ services:
     image: webdevops/apache
     working_dir: /app
     volumes:
-      - "${PATHPESSOAL}/alvitre-site/front/src:/app"
+      - "${PATHPESSOAL}/alvitre-site/front/dist:/app"
     networks:
       - stack_ponte
     ports:
