@@ -23,7 +23,7 @@
   <meta property="og:image" content="/static/logo/png/alvitre.png" />
 
 
-  <link rel="shortcut icon" href="/static/logo//favicon/alvitre.ico">
+  <link rel="shortcut icon" href="/static/logo/favicon/alvitre.ico">
   <link rel="apple-touch-icon" href="/static/logo/alvitre-icon-iphone-60x60.png">
   <link rel="apple-touch-icon" sizes="60x60" href="/static/logo/alvitre-icon-ipad-76x76.png">
   <link rel="apple-touch-icon" sizes="114x114" href="/static/logo/alvitre-icon-iphone-retina-120x120.png">
@@ -31,40 +31,22 @@
   <link rel='manifest' href='./manifest.json'>
   <meta name="theme-color" content="#2196F3">
 
+  <style>
+    @import url("./src/assets/styles/banner.css");
+    @import url("./src/index.css");
+  </style>
 
 </head>
 
 <body class="bg-gray-900 text-gray-100">
-
-
-  <!--  <header class="navbar bg-base-100">
-    <div class="flex-1">
-    </div>
-    <div class="flex-none">
-      <ul class="menu menu-horizontal px-1">
-        <li><a href="#header">Inicio</a></li>
-        <li><a href="#sistemas">Sistemas</a></li>
-        <li><a href="#servicos">Serviços</a></li>
-        <li><a href="#tecnologias">Tecnologias</a></li>
-        <li><a href="#desenvolvedor">Desenvolvedor</a></li>
-        <li><a href="#servicos">Serviços</a></li>
-        <li><a href="#portfolio">Portfólio</a></li>
-        <li><a href="https://web.whatsapp.com/send?phone=5511946439695"><span class="icon is large text-green-600">
-              <i class="fab fa-1x fa-whatsapp"></i>
-            </span>
-            Contato</a></li>
-      </ul>
-    </div>
-  </header> -->
-
   <section id="header">
     <header>
-      <div class="flex flex-wrap sm:justify-center md:justify-between mb-2 px-4 header ">
+      <div class="flex flex-wrap sm:justify-center md:justify-between mb-2 px-4 header mx-8">
         <div class="w-full sm:w-full md:w-auto lg:auto text-center md:text-left">
           <nav class="align-middle flex">
             <div class="block lg:hidden mt-1">
               <button id="togleMenu"
-                class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-gray-800 hover:border-white active:border-0">
+                class="flex items-center px-3 py-4 border rounded text-gray-500 border-gray-600 hover:text-gray-800 hover:border-white active:border-0">
                 <svg class="fill-current h-4 w-4" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                   <title>Menu</title>
                   <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
@@ -106,56 +88,66 @@
   </section>
 
   <section id="banner">
-    <div class="flex flex-wrap justify-center py-8">
-      <div class="w-full">
-        <div class="mr-auto ml-auto bg-gray-200 rounded-full w-48 h-48 shadow-lg p-1">
-          <picture>
-            <source srcset="/static/logo//webp/alvitre.webp" type="image/webp" />
-            <source srcset="/static/logo//png/alvitre.png" type="image/jpeg" />
-            <img width="100" height="50" class="w-auto h-40 ml-auto mr-auto" src="/static/logo//webp/alvitre.webp"
+    <div class="flex flex-wrap center py-4">
+      <div class="w-auto justify-center mx-auto z-0">
+        <div class="animate__animated animate__rotateIn bg-gray-200 rounded-full w-48 h-48 shadow-lg p-1">
+          <picture class="">
+            <source srcset="/static/logo/webp/alvitre.webp" type="image/webp" />
+            <source srcset="/static/logo/png/alvitre.png" type="image/jpeg" />
+            <img width="100" height="50" class="w-auto h-40 ml-auto mr-auto" src="/static/logo/webp/alvitre.webp"
               alt="Logo da Alvitre!" />
           </picture>
-        </div>
-      </div>
-      <div class="w-full">
-        <h1 class="text-white text-center text-4xl">Alvitre</h1>
-      </div>
-      <div class="w-full mt-2">
-        <h2 class="text-white text-1xl text-center">DESENVOLVIMENTO</h2>
-        <h2 class="text-white text-1xl text-center">SISTEMAS | SITES | APLICATIVOS</h2>
-      </div>
-      <div class="w-full px-4">
-        <div class="flex justify-end">
-          <div class="mt-4">
-            <div id="toastNotifications" class="div-install-pwa toastNotifications">
-              <div class="border-blue-700 border-l-4 mx-auto bg-gray-800 shadow-lg rounded-lg hover:bg-gray-900">
-                <div class="flex flex-wrap justify-between">
-                  <div class="text-sm p-3 btn-install-pwa cursor-pointer">
-                    <span class="text-left font-bold">Adicione a tela inicial</span>
-                    <div class="toast-body-tail">
-                      <div class=" tracking-tight text-gray-200">
-                        Disponível para instalação
-                      </div>
-                    </div>
-                  </div>
 
-                  <div class="border-l px-1 cursor-pointer btn-pwa-close">
-                    <div class="text-center my-5">
-                      <svg class="fill-current hover:text-red-600 text-red-400" xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24" width="22" height="22">
-                        <path class="heroicon-ui"
-                          d="M16.24 14.83a1 1 0 0 1-1.41 1.41L12 13.41l-2.83 2.83a1 1 0 0 1-1.41-1.41L10.59 12 7.76 9.17a1 1 0 0 1 1.41-1.41L12 10.59l2.83-2.83a1 1 0 0 1 1.41 1.41L13.41 12l2.83 2.83z" />
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
+
+        <h1 class="text-white text-center text-4xl">Alvitre</h1>
+
+
+      </div>
+      <div class=" w-full relative md:absolute right-0 mt-2 md:mt-0">
+        <div class="chat chat-end animate__animated animate__backInDown animate__delay-1s">
+          <div class="chat-bubble chat-bubble-primary text-sm">DESENVOLVIMENTO WEB</div>
+        </div>
+        <div class="chat chat-end animate__animated animate__backInDown animate__delay-2s">
+          <div class="chat-bubble chat-bubble-primary text-sm">SISTEMAS | SITES</div>
+        </div>
+        <div class="chat chat-end animate__animated animate__backInDown animate__delay-3s">
+          <div class="chat-bubble chat-bubble-primary text-sm">AULAS | CONSULTORIA</div>
+        </div>
+
+
+
       </div>
     </div>
 
+
+  </section>
+
+  <section id="videos" class="bg-gray-800 py-4">
+    <!--     <div class="flex pb-5">
+      <div class="w-full justify-center text-center text-gray-400">
+        <h2 class="text-2xl text-center">VÍDEOS</h2>
+      </div>
+    </div> -->
+    <div class="flex justify-center flex-wrap mx-auto">
+      <div class="w-full md:w-1/2 lg:w-1/2 px-4 md:px-14 py-4 mx-auto">
+        <div class="bg-gray-800 shadow-2xl">
+          <iframe class="mx-auto w-full" width="560" height="315" src="https://www.youtube.com/embed/IBogCKMwOLg"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="w-full md:w-1/2 lg:w-1/2 px-4 md:px-14 py-4 mx-auto">
+        <div class="bg-gray-800 shadow-2xl">
+          <iframe class="mx-auto w-full" width="560" height="315" src="https://www.youtube.com/embed/Cm4GGMZvyOw"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+
+    </div>
   </section>
 
   <section id="sistemas" class="bg-gray-900">
@@ -679,6 +671,8 @@
   </section>
 
 
+
+
   <footer>
     <button id="totop" type="button" data-mdb-ripple="true" data-mdb-ripple-color="light"
       class="inline-block p-3 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out bottom-5 right-5 fixed"
@@ -690,6 +684,39 @@
         </path>
       </svg>
     </button>
+    <div class="pwa flex mb-16">
+      <div class="w-full px-4">
+        <div class="flex justify-center">
+          <div class="mt-4 pb-8">
+            <div id="toastNotifications" class="div-install-pwa toastNotifications">
+              <div class="border-blue-700 border-l-4 mx-auto bg-gray-800 shadow-lg rounded-lg hover:bg-gray-900">
+                <div class="flex flex-wrap justify-between">
+                  <div class="text-sm p-3 btn-install-pwa cursor-pointer">
+                    <span class="text-left font-bold">Adicione a tela inicial</span>
+                    <div class="toast-body-tail">
+                      <div class=" tracking-tight text-gray-200">
+                        Disponível para instalação
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="border-l px-1 cursor-pointer btn-pwa-close">
+                    <div class="text-center my-5">
+                      <svg class="fill-current hover:text-red-600 text-red-400" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24" width="22" height="22">
+                        <path class="heroicon-ui"
+                          d="M16.24 14.83a1 1 0 0 1-1.41 1.41L12 13.41l-2.83 2.83a1 1 0 0 1-1.41-1.41L10.59 12 7.76 9.17a1 1 0 0 1 1.41-1.41L12 10.59l2.83-2.83a1 1 0 0 1 1.41 1.41L13.41 12l2.83 2.83z" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
     <script type="module" src="./src/main.ts"></script>
 
     <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
@@ -709,6 +736,35 @@
 
 </html>
 <style>
-  @import url("./src/assets/styles/banner.css");
-  @import url("./src/index.css");
+  /* @keyframes bounce {
+
+    100% {
+      transform: none;
+      animation-timing-function: cubic-bezier(0, 0, 1, 1);
+    }
+
+    75% {
+      transform: translateY(-12%);
+      animation-timing-function: cubic-bezier(0.1, 0, 1, 0.8);
+    }
+
+    50% {
+      transform: none;
+      animation-timing-function: cubic-bezier(0, 0, 1, 0.8);
+    }
+
+    25% {
+      transform: translateY(-12%);
+      animation-timing-function: cubic-bezier(0.1, 0, 1, 0.8);
+    }
+
+    0% {
+      transform: none;
+      animation-timing-function: cubic-bezier(0, 0, 1, 0.8);
+    }
+  }
+
+  .new-bounce {
+    animation: bounce 1s forwards;
+  } */
 </style>
