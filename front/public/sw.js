@@ -1,4 +1,4 @@
-const cacheName = "js13kPWA-v1";
+const cacheName = "js13kPWA-v2";
 const contentToCache = ["/"];
 
 /* self.addEventListener("install", function (e) {
@@ -10,16 +10,13 @@ const contentToCache = ["/"];
  */
 
 self.addEventListener("install", (e) => {
-  console.log("[Service Worker] Install");
+  console.log("SW START");
   e.waitUntil(
     (async () => {
       const cache = await caches.open(cacheName);
-      console.log("[Service Worker] Caching all: app shell and content");
       await cache.addAll(contentToCache);
     })()
   );
 });
 
-self.addEventListener("fetch", (e) => {
-  console.log(`[Service Worker] Fetched resource ${e.request.url}`);
-});
+self.addEventListener("fetch", (e) => {});

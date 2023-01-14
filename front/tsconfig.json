@@ -16,5 +16,13 @@
     "noImplicitReturns": true,
     "skipLibCheck": true
   },
-  "include": ["src", "../frontend/counter.ts", "../frontend/counter.ts"]
+  "include": [
+    "blog",
+    "portfolio",
+    "src",
+    "../frontend/counter.ts",
+    "../frontend/counter.ts",
+    "vite-env.d.ts",
+    "vite-env.d.ts"
+  ]
 }
