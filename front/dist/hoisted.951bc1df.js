@@ -1,0 +1,1 @@
+import{p as o}from"./chunks/port.fe778f1b.js";import"./chunks/main.f44221ea.js";import"https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js";/* empty css                              */o();console.log("script");
