@@ -1,0 +1,12 @@
+User-agent: *
+Disallow: 
+Disallow: /phpmyadmin
+Disallow: /acolher
+Disallow: /portainer
+Disallow: /traefik
+Disallow: /nextcloud
+Disallow: /jelly
+Disallow: /qbt
+
+
+

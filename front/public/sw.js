@@ -1,4 +1,4 @@
-const cacheName = "js13kPWA-v2.1";
+const cacheName = "js13kPWA-v2.2";
 const contentToCache = ["/"];
 
 /* self.addEventListener("install", function (e) {
