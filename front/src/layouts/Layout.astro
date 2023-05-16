@@ -5,7 +5,7 @@ export interface Props {
   metaImage: string;
 }
 
-const { title, url, metaIMage } = Astro.props;
+const { title, url } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -65,68 +65,92 @@ const { title, url, metaIMage } = Astro.props;
     <meta name="theme-color" content="#2196F3" />
   </head>
 
-  <body class="bg-gray-900 text-gray-100">
+  <body
+    class="bg-gray-900 text-gray-100 px-0 xs:px-0 sm:px-0 md:px-0 lg:px-0 xl:px-20 2xl:px-60 3xl:px-96"
+  >
     <section id="header">
       <header>
         <div
-          class="flex flex-wrap sm:justify-center md:justify-between mb-2 px-4 header mx-8"
+          class="flex flex-wrap sm:justify-center md:justify-between px-4 header mx-8"
         >
+          <nav class="navbar">
+            <div class="navbar-start">
+              <div class="dropdown">
+                <label tabindex="0" class="btn btn-ghost lg:hidden">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M4 6h16M4 12h8m-8 6h16"></path>
+                  </svg>
+                </label>
+                <ul
+                  tabindex="0"
+                  class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+                >
+                  <li><a href="/#header"> Inicio</a></li>
+
+                  <li><a href="/#sistemas"> Sistemas</a></li>
+                  <li><a href="/#servicos"> Serviços</a></li>
+                  <li>
+                    <a href="/#tecnologias"> Tecnologias</a>
+                  </li>
+                  <li>
+                    <a href="https://alvitre.com.br#desenvolvedor">
+                      Desenvolvedor
+                    </a>
+                  </li>
+
+                  <li><a href="/#portfolio"> Portfólio</a></li>
+                </ul>
+              </div>
+              <a class="btn btn-ghost normal-case text-xl">
+                <img
+                  width="50"
+                  class="mr-4"
+                  src="/static/logo/webp/alvitre.webp"
+                  alt="Logo da Alvitre!"
+                />
+                Alvitre
+              </a>
+            </div>
+            <div class="navbar-center hidden lg:flex">
+              <ul class="menu menu-horizontal px-1">
+                <li><a href="/#header"> Inicio</a></li>
+
+                <li><a href="/#sistemas"> Sistemas</a></li>
+                <li><a href="/#servicos"> Serviços</a></li>
+                <li>
+                  <a href="/#tecnologias"> Tecnologias</a>
+                </li>
+                <li>
+                  <a href="https://alvitre.com.br#desenvolvedor">
+                    Desenvolvedor
+                  </a>
+                </li>
+
+                <li><a href="/#portfolio"> Portfólio</a></li>
+              </ul>
+            </div>
+            <div class="navbar-end">
+              <a
+                id="whatsapp"
+                href="https://web.whatsapp.com/send?phone=5511946439695"
+                target="__blank"
+                class="btn btn-primary">Contato</a
+              >
+            </div>
+          </nav>
           <div
             class="w-full sm:w-full md:w-auto lg:auto text-center md:text-left"
           >
-            <nav class="align-middle flex">
-              <div class="block lg:hidden mt-1">
-                <button
-                  id="togleMenu"
-                  class="flex items-center px-3 py-4 border rounded text-gray-500 border-gray-600 hover:text-gray-800 hover:border-white active:border-0"
-                >
-                  <svg
-                    class="fill-current h-4 w-4"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <title>Menu</title>
-                    <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"
-                    ></path>
-                  </svg>
-                </button>
-              </div>
-              <div id="main-menu" class="mt-2 hidden lg:block">
-                <a name="inicio" href="/#header" class="mr-2"> Inicio</a>
-
-                <a name="sistemas" href="/#sistemas" class="mx-4 mt-4">
-                  Sistemas
-                </a>
-                <a name="servicos" href="/#servicos" class="mx-4 mt-4">
-                  Serviços
-                </a>
-                <a name="tecnologias" href="/#tecnologias" class="mx-4 mt-4">
-                  Tecnologias
-                </a>
-                <a
-                  name="desenvolvedor"
-                  href="https://alvitre.com.br#desenvolvedor"
-                  class="mx-4 mt-4"
-                >
-                  Desenvolvedor
-                </a>
-
-                <a name="portfolio" href="/#portfolio" class="mx-4 mt-4">
-                  Portfólio
-                </a>
-
-                <a
-                  id="whatsapp"
-                  href="https://web.whatsapp.com/send?phone=5511946439695"
-                  class="mx-4 mt-4 whatsapp"
-                >
-                  <span class="icon is large text-green-600">
-                    <i class="fab fa-1x fa-whatsapp"></i>
-                  </span>
-                  Contato
-                </a>
-              </div>
-            </nav>
           </div>
         </div>
       </header>
@@ -135,20 +159,4 @@ const { title, url, metaIMage } = Astro.props;
   </body>
 
   <script src="../assets/scripts//main.ts"></script>
-  <script
-    src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"
-  ></script>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P7E03M70BX"
-  ></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag("js", new Date());
-
-    gtag("config", "G-P7E03M70BX");
-    console.log("Analitycs");
-  </script>
 </html>

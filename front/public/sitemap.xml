@@ -9,27 +9,12 @@
 
 <url>
   <loc>https://alvitre.com.br/</loc>
-  <lastmod>2023-01-14T21:31:13+00:00</lastmod>
+  <lastmod>2023-05-14T21:31:13+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://alvitre.com.br/blog</loc>
-  <lastmod>2023-01-21T21:31:12+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://alvitre.com.br/blog/primeiros-passos-nodejs</loc>
-  <lastmod>2023-01-14T21:31:12+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://alvitre.com.br/blog/git-github-para-iniciantes</loc>
-  <lastmod>2023-01-14T21:31:12+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
   <loc>https://alvitre.com.br/portfolio</loc>
-  <lastmod>2023-01-14T21:31:12+00:00</lastmod>
+  <lastmod>2023-05-14T21:31:12+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 
