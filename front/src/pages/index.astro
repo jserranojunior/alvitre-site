@@ -9,8 +9,8 @@ import Layout from "../layouts/Layout.astro";
 >
   <section
     id=""
-    class="bg-cover bg-center"
-    style="background-image: url('/static/wallpaper.jpg')"
+    class="bg-cover bg-center welcome"
+   
   >
     <div class="flex flex-wrap py-52">
       <div class="relative mx-auto overflow-hidden rounded-lg shadow-lg">
@@ -43,13 +43,27 @@ import Layout from "../layouts/Layout.astro";
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img
-              width="100"
-              height="50"
-              class="w-full mt-2 rounded-md"
-              src="/static/videos/2.png"
-              alt="git-github-para-iniciantes"
-            />
+            
+
+            <picture>
+              <source
+                srcset="/static/videos/webp/2.webp"
+                type="image/webp"
+              />
+              <source
+                srcset="/static/videos/jpeg/2.jpeg"
+                type="image/jpeg"
+              />
+              <img
+                width="100"
+                height="50"
+                class="w-full mt-2 rounded-md"
+                src="/static/videos/2.webp"
+                alt="node-para-iniciantes"
+              />
+            </picture>
+
+
           </a>
         </div>
       </div>
@@ -61,13 +75,25 @@ import Layout from "../layouts/Layout.astro";
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img
-              width="100"
-              height="50"
-              class="w-full mt-2 rounded-md"
-              src="/static/videos/1.png"
-              alt="git-github-para-iniciantes"
-            />
+        
+
+            <picture>
+              <source
+                srcset="/static/videos/webp/1.webp"
+                type="image/webp"
+              />
+              <source
+                srcset="/static/videos/jpeg/1.jpeg"
+                type="image/jpeg"
+              />
+              <img
+                width="100"
+                height="50"
+                class="w-full mt-2 rounded-md"
+                src="/static/videos/1.webp"
+                alt="git-github-para-iniciantes"
+              />
+            </picture>
           </a>
         </div>
       </div>
@@ -88,11 +114,26 @@ import Layout from "../layouts/Layout.astro";
         <div
           class="bg-gray-800 shadow-lg rounded-lg overflow-hidden transform scale-100 hover:scale-105 transition duration-300 ease-in-out"
         >
-          <img
-            class="w-full h-64 object-cover object-center"
-            src="static/servicos/criacaoweb.png"
-            alt="Imagem de exemplo"
-          />
+      
+
+          <picture>
+            <source
+              srcset="/static/servicos/webp/criacaoweb.webp"
+              type="image/webp"
+            />
+            <source
+              srcset="/static/servicos/png/criacaoweb.png"
+              type="image/jpeg"
+            />
+            <img
+              width="150"
+              height="50"
+              class="w-full h-64 object-cover object-center"
+              src="/static/servicos/webp/criacaoweb.webp"
+              alt="Foto criacao web"
+            />
+          </picture>
+
           <div class="py-2 px-6">
             <h2 class="font-bold text-2xl mb-2 text-gray-400">
               Criação de site
@@ -110,11 +151,25 @@ import Layout from "../layouts/Layout.astro";
         <div
           class="bg-gray-800 shadow-lg rounded-lg overflow-hidden transform scale-100 hover:scale-105 transition duration-300 ease-in-out"
         >
-          <img
-            class="w-full h-64 object-cover object-center"
-            src="/static/servicos/web.png"
-            alt="Imagem de exemplo"
-          />
+         
+          <picture>
+            <source
+              srcset="/static/servicos/webp/web.webp"
+              type="image/webp"
+            />
+            <source
+              srcset="/static/servicos/png/web.png"
+              type="image/jpeg"
+            />
+            <img
+              width="150"
+              height="50"
+              class="w-full h-64 object-cover object-center"
+              src="/static/servicos/webp/web.webp"
+              alt="Foto web"
+            />
+          </picture>
+          
           <div class="py-2 px-6">
             <h2 class="font-bold text-2xl mb-2 text-gray-400">Sistemas Web</h2>
             <p class="text-gray-400 text-base my-4">
@@ -130,11 +185,27 @@ import Layout from "../layouts/Layout.astro";
         <div
           class="bg-gray-800 shadow-lg rounded-lg overflow-hidden transform scale-100 hover:scale-105 transition duration-300 ease-in-out"
         >
-          <img
-            class="w-full h-64 object-cover object-center"
-            src="/static/servicos/consultoria.png"
-            alt="Imagem de exemplo"
-          />
+         
+
+          <picture>
+            <source
+              srcset="/static/servicos/webp/consultoria.webp"
+              type="image/webp"
+            />
+            <source
+              srcset="/static/servicos/png/consultoria.png"
+              type="image/jpeg"
+            />
+            <img
+              width="150"
+              height="50"
+              class="w-full h-64 object-cover object-center"
+              src="/static/servicos/webp/consultoria.webp"
+              alt="Foto consultoria"
+            />
+          </picture>
+
+
           <div class="py-2 px-6">
             <h2 class="font-bold text-2xl mb-2 text-gray-400">Consultoria</h2>
             <p class="text-gray-400 text-base my-4">
@@ -357,8 +428,8 @@ import Layout from "../layouts/Layout.astro";
   </section>
 
   <div
-    class="flex flex-wrap bg-cover bg-center"
-    style="background-image: url('/static/wallpaper_lamp.jpg')"
+    class="flex flex-wrap bg-cover bg-center dev"
+  
   >
     <div class="w-full md:w-full lg:w-1/2">
       <section id="desenvolvedor" class="section py-6">
@@ -388,8 +459,8 @@ import Layout from "../layouts/Layout.astro";
                           type="image/png"
                         />
                         <img
-                          width="100%"
-                          height="100%"
+                          width="230"
+                          height="100"
                           class="rounded-full h-56 ml-auto mr-auto"
                           src="/static/desenvolvedor/png/jorge.png"
                           alt="Foto desenvolvedor!"
@@ -724,7 +795,7 @@ import Layout from "../layouts/Layout.astro";
                 type="image/png"
               />
               <img
-                width="100%"
+                width="500"
                 height="100"
                 class="rounded-lg"
                 src="/static/portfolio/thumbnail/png/lsstar.png"
@@ -747,7 +818,7 @@ import Layout from "../layouts/Layout.astro";
                 type="image/png"
               />
               <img
-                width="100%"
+              width="500"
                 height="100"
                 class="rounded-lg"
                 src="/static/portfolio/thumbnail/png/abcp.png"
@@ -770,7 +841,7 @@ import Layout from "../layouts/Layout.astro";
                 type="image/png"
               />
               <img
-                width="100%"
+              width="500"
                 height="100"
                 class="rounded-lg"
                 src="/static/portfolio/thumbnail/png/ajz.png"
@@ -793,7 +864,7 @@ import Layout from "../layouts/Layout.astro";
                 type="image/png"
               />
               <img
-                width="100%"
+              width="500"
                 height="100"
                 class="rounded-lg"
                 src="/static/portfolio/thumbnail/png/bella.png"
@@ -816,7 +887,7 @@ import Layout from "../layouts/Layout.astro";
                 type="image/png"
               />
               <img
-                width="100%"
+              width="500"
                 height="100"
                 class="rounded-lg"
                 src="/static/portfolio/thumbnail/png/bressan.png"
@@ -839,7 +910,7 @@ import Layout from "../layouts/Layout.astro";
                 type="image/png"
               />
               <img
-                width="100%"
+              width="500"
                 height="100"
                 class="rounded-lg"
                 src="/static/portfolio/thumbnail/png/casadelpueblo.png"
@@ -862,7 +933,7 @@ import Layout from "../layouts/Layout.astro";
                 type="image/png"
               />
               <img
-                width="100%"
+              width="500"
                 height="100"
                 class="rounded-lg"
                 src="/static/portfolio/thumbnail/png/espacovitoria.png"
@@ -885,7 +956,7 @@ import Layout from "../layouts/Layout.astro";
                 type="image/png"
               />
               <img
-                width="100%"
+              width="500"
                 height="100"
                 class="rounded-lg"
                 src="/static/portfolio/thumbnail/png/fazao.png"
@@ -908,7 +979,7 @@ import Layout from "../layouts/Layout.astro";
                 type="image/png"
               />
               <img
-                width="100%"
+              width="500"
                 height="100"
                 class="rounded-lg"
                 src="/static/portfolio/thumbnail/png/fenix.png"
@@ -931,7 +1002,7 @@ import Layout from "../layouts/Layout.astro";
                 type="image/png"
               />
               <img
-                width="100%"
+              width="500"
                 height="100"
                 class="rounded-lg"
                 src="/static/portfolio/thumbnail/png/fso.png"

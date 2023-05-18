@@ -1,0 +1,12 @@
+
+
+.welcome {
+    background-image: url('/static/wallpapers/jpg/welcome.jpg');
+    background-image: -webkit-image-set(url('/static/wallpapers/webp/welcome.webp') 1x)
+  }
+  
+  .dev {
+    background-image: url('/static/wallpapers/jpg/dev.jpg');
+    background-image: -webkit-image-set(url('/static/wallpapers/webp/dev.webp') 1x)
+  }
+   

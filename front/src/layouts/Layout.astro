@@ -63,6 +63,9 @@ const { title, url } = Astro.props;
     />
     <link rel="manifest" href="../../manifest.json" />
     <meta name="theme-color" content="#2196F3" />
+
+    <meta http-equiv="Cache-control" content="public">
+
   </head>
 
   <body
@@ -111,15 +114,16 @@ const { title, url } = Astro.props;
                   <li><a href="/#portfolio"> Portfólio</a></li>
                 </ul>
               </div>
-              <a class="btn btn-ghost normal-case text-xl">
+              <div class="btn btn-ghost normal-case text-xl">
                 <img
                   width="50"
+                  height="50"
                   class="mr-4"
                   src="/static/logo/webp/alvitre.webp"
                   alt="Logo da Alvitre!"
                 />
                 Alvitre
-              </a>
+              </div>
             </div>
             <div class="navbar-center hidden lg:flex">
               <ul class="menu menu-horizontal px-1">

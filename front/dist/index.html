@@ -29,8 +29,11 @@
     <link rel="apple-touch-icon" sizes="144x144" href="/static/logo/alvitre-icon-ipad-retina-152x152.png">
     <link rel="manifest" href="../../manifest.json">
     <meta name="theme-color" content="#2196F3">
-  <link rel="stylesheet" href="/assets/index.bb1c1986.css" />
-<link rel="stylesheet" href="/assets/index.e2b0c779.css" /><script type="module" src="/hoisted.0c0f1d87.js"></script></head>
+
+    <meta http-equiv="Cache-control" content="public">
+
+  <link rel="stylesheet" href="/assets/index.8b6880e2.css" />
+<link rel="stylesheet" href="/assets/index.e2b0c779.css" /><script type="module" src="/hoisted.4feab464.js"></script></head>
 
   <body class="bg-gray-900 text-gray-100 px-0 xs:px-0 sm:px-0 md:px-0 lg:px-0 xl:px-20 2xl:px-60 3xl:px-96">
     <section id="header">
@@ -61,10 +64,10 @@
                   <li><a href="/#portfolio"> Portfólio</a></li>
                 </ul>
               </div>
-              <a class="btn btn-ghost normal-case text-xl">
-                <img width="50" class="mr-4" src="/static/logo/webp/alvitre.webp" alt="Logo da Alvitre!">
+              <div class="btn btn-ghost normal-case text-xl">
+                <img width="50" height="50" class="mr-4" src="/static/logo/webp/alvitre.webp" alt="Logo da Alvitre!">
                 Alvitre
-              </a>
+              </div>
             </div>
             <div class="navbar-center hidden lg:flex">
               <ul class="menu menu-horizontal px-1">
@@ -93,7 +96,7 @@
         </div>
       </header>
     </section>
-    <section id="" class="bg-cover bg-center" style="background-image: url('/static/wallpaper.jpg')">
+    <section id="" class="bg-cover bg-center welcome">
     <div class="flex flex-wrap py-52">
       <div class="relative mx-auto overflow-hidden rounded-lg shadow-lg">
         <div class="bg-black bg-opacity-30 backdrop-filter backdrop-blur-lg p-6">
@@ -117,7 +120,15 @@
       <div class="w-full md:w-1/2 lg:w-1/2 px-4 md:px-14 py-4 mx-auto">
         <div class="bg-gray-800 shadow-2xl">
           <a href="https://www.youtube.com/embed/Cm4GGMZvyOw" target="_blank" rel="noopener noreferrer">
-            <img width="100" height="50" class="w-full mt-2 rounded-md" src="/static/videos/2.png" alt="git-github-para-iniciantes">
+            
+
+            <picture>
+              <source srcset="/static/videos/webp/2.webp" type="image/webp">
+              <source srcset="/static/videos/jpeg/2.jpeg" type="image/jpeg">
+              <img width="100" height="50" class="w-full mt-2 rounded-md" src="/static/videos/2.webp" alt="node-para-iniciantes">
+            </picture>
+
+
           </a>
         </div>
       </div>
@@ -125,7 +136,13 @@
       <div class="w-full md:w-1/2 lg:w-1/2 px-4 md:px-14 py-4 mx-auto">
         <div class="bg-gray-800 shadow-2xl">
           <a href="https://www.youtube.com/embed/IBogCKMwOLg" target="_blank" rel="noopener noreferrer">
-            <img width="100" height="50" class="w-full mt-2 rounded-md" src="/static/videos/1.png" alt="git-github-para-iniciantes">
+        
+
+            <picture>
+              <source srcset="/static/videos/webp/1.webp" type="image/webp">
+              <source srcset="/static/videos/jpeg/1.jpeg" type="image/jpeg">
+              <img width="100" height="50" class="w-full mt-2 rounded-md" src="/static/videos/1.webp" alt="git-github-para-iniciantes">
+            </picture>
           </a>
         </div>
       </div>
@@ -139,7 +156,14 @@
     <div class="flex justify-center flex-wrap px-8 md:px-20 pt-4">
       <div class="w-full md:w-1/3 p-4">
         <div class="bg-gray-800 shadow-lg rounded-lg overflow-hidden transform scale-100 hover:scale-105 transition duration-300 ease-in-out">
-          <img class="w-full h-64 object-cover object-center" src="static/servicos/criacaoweb.png" alt="Imagem de exemplo">
+      
+
+          <picture>
+            <source srcset="/static/servicos/webp/criacaoweb.webp" type="image/webp">
+            <source srcset="/static/servicos/png/criacaoweb.png" type="image/jpeg">
+            <img width="150" height="50" class="w-full h-64 object-cover object-center" src="/static/servicos/webp/criacaoweb.webp" alt="Foto criacao web">
+          </picture>
+
           <div class="py-2 px-6">
             <h2 class="font-bold text-2xl mb-2 text-gray-400">
               Criação de site
@@ -155,7 +179,13 @@
 
       <div class="w-full md:w-1/3 p-4">
         <div class="bg-gray-800 shadow-lg rounded-lg overflow-hidden transform scale-100 hover:scale-105 transition duration-300 ease-in-out">
-          <img class="w-full h-64 object-cover object-center" src="/static/servicos/web.png" alt="Imagem de exemplo">
+         
+          <picture>
+            <source srcset="/static/servicos/webp/web.webp" type="image/webp">
+            <source srcset="/static/servicos/png/web.png" type="image/jpeg">
+            <img width="150" height="50" class="w-full h-64 object-cover object-center" src="/static/servicos/webp/web.webp" alt="Foto web">
+          </picture>
+          
           <div class="py-2 px-6">
             <h2 class="font-bold text-2xl mb-2 text-gray-400">Sistemas Web</h2>
             <p class="text-gray-400 text-base my-4">
@@ -169,7 +199,15 @@
 
       <div class="w-full md:w-1/3 p-4">
         <div class="bg-gray-800 shadow-lg rounded-lg overflow-hidden transform scale-100 hover:scale-105 transition duration-300 ease-in-out">
-          <img class="w-full h-64 object-cover object-center" src="/static/servicos/consultoria.png" alt="Imagem de exemplo">
+         
+
+          <picture>
+            <source srcset="/static/servicos/webp/consultoria.webp" type="image/webp">
+            <source srcset="/static/servicos/png/consultoria.png" type="image/jpeg">
+            <img width="150" height="50" class="w-full h-64 object-cover object-center" src="/static/servicos/webp/consultoria.webp" alt="Foto consultoria">
+          </picture>
+
+
           <div class="py-2 px-6">
             <h2 class="font-bold text-2xl mb-2 text-gray-400">Consultoria</h2>
             <p class="text-gray-400 text-base my-4">
@@ -299,7 +337,7 @@
         </div>
       </div>
     </div>
-  </section><div class="flex flex-wrap bg-cover bg-center" style="background-image: url('/static/wallpaper_lamp.jpg')">
+  </section><div class="flex flex-wrap bg-cover bg-center dev">
     <div class="w-full md:w-full lg:w-1/2">
       <section id="desenvolvedor" class="section py-6">
         <div class="flex pb-5">
@@ -317,7 +355,7 @@
                       <picture class="rounded-full object-none object-center mdh-64 msw-64">
                         <source srcset="/static/desenvolvedor/webp/jorge.webp" type="image/webp">
                         <source srcset="/static/desenvolvedor/png/jorge.png" type="image/png">
-                        <img width="100%" height="100%" class="rounded-full h-56 ml-auto mr-auto" src="/static/desenvolvedor/png/jorge.png" alt="Foto desenvolvedor!">
+                        <img width="230" height="100" class="rounded-full h-56 ml-auto mr-auto" src="/static/desenvolvedor/png/jorge.png" alt="Foto desenvolvedor!">
                       </picture>
                     </div>
                   </div>
@@ -598,7 +636,7 @@
             <picture>
               <source srcset="/static/portfolio/thumbnail/webp/lsstar.webp" type="image/webp">
               <source srcset="/static/portfolio/thumbnail/png/lsstar.png" type="image/png">
-              <img width="100%" height="100" class="rounded-lg" src="/static/portfolio/thumbnail/png/lsstar.png" alt="lsstar">
+              <img width="500" height="100" class="rounded-lg" src="/static/portfolio/thumbnail/png/lsstar.png" alt="lsstar">
             </picture>
           </div>
         </div>
@@ -609,7 +647,7 @@
             <picture>
               <source srcset="/static/portfolio/thumbnail/webp/abcp.webp" type="image/webp">
               <source srcset="/static/portfolio/thumbnail/png/abcp.png" type="image/png">
-              <img width="100%" height="100" class="rounded-lg" src="/static/portfolio/thumbnail/png/abcp.png" alt="abcp">
+              <img width="500" height="100" class="rounded-lg" src="/static/portfolio/thumbnail/png/abcp.png" alt="abcp">
             </picture>
           </div>
         </div>
@@ -620,7 +658,7 @@
             <picture>
               <source srcset="/static/portfolio/thumbnail/webp/ajz.webp" type="image/webp">
               <source srcset="/static/portfolio/thumbnail/png/ajz.png" type="image/png">
-              <img width="100%" height="100" class="rounded-lg" src="/static/portfolio/thumbnail/png/ajz.png" alt="ajz">
+              <img width="500" height="100" class="rounded-lg" src="/static/portfolio/thumbnail/png/ajz.png" alt="ajz">
             </picture>
           </div>
         </div>
@@ -631,7 +669,7 @@
             <picture>
               <source srcset="/static/portfolio/thumbnail/webp/bella.webp" type="image/webp">
               <source srcset="/static/portfolio/thumbnail/png/bella.png" type="image/png">
-              <img width="100%" height="100" class="rounded-lg" src="/static/portfolio/thumbnail/png/bella.png" alt="bella">
+              <img width="500" height="100" class="rounded-lg" src="/static/portfolio/thumbnail/png/bella.png" alt="bella">
             </picture>
           </div>
         </div>
@@ -642,7 +680,7 @@
             <picture>
               <source srcset="/static/portfolio/thumbnail/webp/bressan.webp" type="image/webp">
               <source srcset="/static/portfolio/thumbnail/png/bressan.png" type="image/png">
-              <img width="100%" height="100" class="rounded-lg" src="/static/portfolio/thumbnail/png/bressan.png" alt="bressan">
+              <img width="500" height="100" class="rounded-lg" src="/static/portfolio/thumbnail/png/bressan.png" alt="bressan">
             </picture>
           </div>
         </div>
@@ -653,7 +691,7 @@
             <picture>
               <source srcset="/static/portfolio/thumbnail/webp/casadelpueblo.webp" type="image/webp">
               <source srcset="/static/portfolio/thumbnail/png/casadelpueblo.png" type="image/png">
-              <img width="100%" height="100" class="rounded-lg" src="/static/portfolio/thumbnail/png/casadelpueblo.png" alt="casadelpueblo">
+              <img width="500" height="100" class="rounded-lg" src="/static/portfolio/thumbnail/png/casadelpueblo.png" alt="casadelpueblo">
             </picture>
           </div>
         </div>
@@ -664,7 +702,7 @@
             <picture>
               <source srcset="/static/portfolio/thumbnail/webp/espacovitoria.webp" type="image/webp">
               <source srcset="/static/portfolio/thumbnail/png/espacovitoria.png" type="image/png">
-              <img width="100%" height="100" class="rounded-lg" src="/static/portfolio/thumbnail/png/espacovitoria.png" alt="espacovitoria">
+              <img width="500" height="100" class="rounded-lg" src="/static/portfolio/thumbnail/png/espacovitoria.png" alt="espacovitoria">
             </picture>
           </div>
         </div>
@@ -675,7 +713,7 @@
             <picture>
               <source srcset="/static/portfolio/thumbnail/webp/fazao.webp" type="image/webp">
               <source srcset="/static/portfolio/thumbnail/png/fazao.png" type="image/png">
-              <img width="100%" height="100" class="rounded-lg" src="/static/portfolio/thumbnail/png/fazao.png" alt="fazao">
+              <img width="500" height="100" class="rounded-lg" src="/static/portfolio/thumbnail/png/fazao.png" alt="fazao">
             </picture>
           </div>
         </div>
@@ -686,7 +724,7 @@
             <picture>
               <source srcset="/static/portfolio/thumbnail/webp/fenix.webp" type="image/webp">
               <source srcset="/static/portfolio/thumbnail/png/fenix.png" type="image/png">
-              <img width="100%" height="100" class="rounded-lg" src="/static/portfolio/thumbnail/png/fenix.png" alt="fenix">
+              <img width="500" height="100" class="rounded-lg" src="/static/portfolio/thumbnail/png/fenix.png" alt="fenix">
             </picture>
           </div>
         </div>
@@ -697,7 +735,7 @@
             <picture>
               <source srcset="/static/portfolio/thumbnail/webp/fso.webp" type="image/webp">
               <source srcset="/static/portfolio/thumbnail/png/fso.png" type="image/png">
-              <img width="100%" height="100" class="rounded-lg" src="/static/portfolio/thumbnail/png/fso.png" alt="fso">
+              <img width="500" height="100" class="rounded-lg" src="/static/portfolio/thumbnail/png/fso.png" alt="fso">
             </picture>
           </div>
         </div>
