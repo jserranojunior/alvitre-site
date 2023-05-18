@@ -19,7 +19,6 @@ function loadGoogleAnalytics() {
 
   gtag("config", gaTrackingCode);
 
-  console.log("GSAP ITS WORK")
 }
 
 export default loadGoogleAnalytics
