@@ -64,7 +64,8 @@ const { title, url } = Astro.props;
     <link rel="manifest" href="../../manifest.json" />
     <meta name="theme-color" content="#2196F3" />
 
-    <meta http-equiv="Cache-control" content="public">
+    <meta http-equiv="Cache-Control" content="public, max-age=31536000">
+
 
   </head>
 
@@ -74,7 +75,7 @@ const { title, url } = Astro.props;
     <section id="header">
       <header>
         <div
-          class="flex flex-wrap sm:justify-center md:justify-between px-4 header mx-8"
+          class="flex flex-wrap sm:justify-center md:justify-between px-4 header mx-0 md:mx-8"
         >
           <nav class="navbar">
             <div class="navbar-start">

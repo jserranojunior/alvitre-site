@@ -1,37 +1,36 @@
 export default () => {
   const headerHeight = document.querySelector<HTMLDivElement>("#header");
-  const toastNotifications = document.querySelector<HTMLDivElement>(
-    "#toastNotifications"
-  );
+  const toastNotifications = document.querySelector<HTMLDivElement>("#toastNotifications");
 
   if (toastNotifications && headerHeight) {
     toastNotifications.style.top = `${headerHeight.offsetHeight + 25}px`;
   }
 
   if ("serviceWorker" in navigator) {
-    navigator.serviceWorker.register("sw.js").then(
-      function () {
-        console.log("Registrado com sucesso o pwa, disponível para instalação");
-      },
-      function () {
-        console.log("Problema ao fazer o registros");
-      }
-    );
+    navigator.serviceWorker.register("sw.js")
+      .then(() => {
+        console.log("PWA registrado com sucesso, disponível para instalação");
+      })
+      .catch(() => {
+        console.log("Erro ao registrar o PWA");
+      });
   } else {
-    console.log("CLIENT: service worker is not supported.");
+    console.log("CLIENTE: O service worker não é suportado.");
   }
 
-  let myPrompt: any | Event;
+  let myPrompt: any;
   const pwaAlert = document.querySelector<HTMLDivElement>(".div-install-pwa");
   const btnPWA = document.querySelector(".btn-install-pwa");
   const btnPWAClose = document.querySelector(".btn-pwa-close");
 
   if (pwaAlert) {
-    window.addEventListener("beforeinstallprompt", (e) => {
+    const beforeInstallPromptHandler = (e: Event) => {
       e.preventDefault();
       myPrompt = e;
       pwaAlert.style.display = "block";
-    });
+    };
+
+    window.addEventListener("beforeinstallprompt", beforeInstallPromptHandler);
   }
 
   if (btnPWA) {
@@ -40,7 +39,9 @@ export default () => {
         pwaAlert.style.display = "none";
       }
 
-      myPrompt.prompt();
+      if (myPrompt) {
+        myPrompt.prompt();
+      }
     });
   }
 

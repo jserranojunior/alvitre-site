@@ -1,9 +1,12 @@
 export default function toTop() {
-  const btnToTop = document.querySelector("#totop");
-  if (btnToTop instanceof HTMLButtonElement) {
+  const btnToTop = document.querySelector("#totop") as HTMLButtonElement | null;
+  if (btnToTop) {
     console.log("add");
     btnToTop.addEventListener("click", () => {
-      window.scrollTo(0, 0);
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
     });
   }
 }
