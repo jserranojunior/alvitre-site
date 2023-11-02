@@ -1,8 +1,7 @@
-const cacheName = "js13kPWA-v2.6.3";
+const cacheName = "js13kPWA-v2.6.5";
 const contentToCache = ["/"];
 
 self.addEventListener("install", (event) => {
-  console.log("Cache online");
   event.waitUntil(
     (async () => {
       const cache = await caches.open(cacheName);

@@ -16,7 +16,6 @@ export default function verifyDevice() {
 
   updateWhatsAppLinks(whatsapp, isMobileDevice);
 
-  console.log(isMobileDevice ? "É mobile" : "Não é mobile");
 
   return whatsapp;
 }
