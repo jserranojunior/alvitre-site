@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PWA com Golang</title>
+  </head>
+  <body>
+    <h1>Exemplo PWA com Golang</h1>
+    <button onclick="init()">Inscrever-se</button>
+    <button onclick="sendNotification()">Enviar Notificação</button>
+    <script></script>
+    <script>
+        async function init(){
+           await sw()
+           await requestNotify();
+            await subscribe();
+        }
+        async function sw() {
+    if ("serviceWorker" in navigator) {
+        try {
+            const registration = await navigator.serviceWorker.register("/service-worker.js");
+            console.log("Service Worker registrado com sucesso:", registration);
+            return registration; // Retorna a referência ao objeto de registro
+        } catch (error) {
+            console.error("Erro ao registrar o Service Worker:", error);
+        }
+    }
+    return null; // Se não houver suporte a Service Worker, retorna null
+}
+
+      async function requestNotify() {
+    try {
+        console.log("Solicitando permissões de notificação");
+        const permission = await Notification.requestPermission();
+        if (permission === "granted") {
+            console.log("Permissão de notificação concedida");
+        } else {
+            console.log("Permissão já concedida");
+        }
+    } catch (error) {
+        console.error("Erro ao solicitar permissão de notificação:", error);
+    }
+}
+
+
+
+async function subscribe() {
+    try {
+        const registration = await navigator.serviceWorker.ready;
+        console.log(registration.pushManager)
+        const subscription = await registration.pushManager.subscribe({
+            userVisibleOnly: true,
+            applicationServerKey: urlBase64ToUint8Array(
+                "BOr5odV2G9uzw4BFbZX6z7yhG83oUVZpmThomx6iI9FMC1Hof3FljEew3MzHCN9L0VnnbZzyaGyEJEdpNZ2_SgI"
+            )
+        });
+
+        console.log("Inscrição realizada com sucesso:", subscription);
+    } catch (error) {
+        console.error("Erro durante a inscrição:", error);
+
+        if (error instanceof DOMException && error.name === "NotAllowedError") {
+            console.error("A permissão para notificações foi negada.");
+        } else if (error instanceof DOMException && error.name === "NotSupportedError") {
+            console.error("O navegador não suporta notificações push.");
+        } else {
+            console.error("Outro erro durante a inscrição:", error);
+        }
+    }
+}
+
+/*
+async function subscribe(sw) { 
+     console.log(sw,"sw");
+   
+          const subscription = await sw.pushManager.subscribe({
+            userVisibleOnly: true,
+            applicationServerKey: urlBase64ToUint8Array(
+                "BOr5odV2G9uzw4BFbZX6z7yhG83oUVZpmThomx6iI9FMC1Hof3FljEew3MzHCN9L0VnnbZzyaGyEJEdpNZ2_SgI"
+            ),
+        }) 
+        console.log(subscription,"DADOS REQUISITADOS")
+      
+
+  
+  
+     try {
+  
+      
+        // Envie a subscrição para o servidor
+        const response = await fetch("http://localhost:8080/subscribe", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(subscription),
+        });
+
+        if (!response.ok) {
+            throw new Error(`Falha ao enviar a subscrição para o servidor. Código: ${response.status}`);
+        }
+
+        console.log("Inscrição realizada com sucesso:", subscription);
+    } catch (error) {
+        console.error("Erro ao se inscrever no servidor:", error);
+        console.log(error)
+    } */
+
+
+
+      async function sendNotification() {
+        try {
+          await fetch("http://localhost:8080/push", {
+            method: "POST",
+          });
+
+          console.log("Notificação enviada com sucesso");
+        } catch (error) {
+          console.error("Erro ao enviar notificação:", error);
+        }
+      }
+
+      function urlBase64ToUint8Array(base64String) {
+        const padding = "=".repeat((4 - (base64String.length % 4)) % 4);
+        const base64 = (base64String + padding)
+          .replace(/\-/g, "+")
+          .replace(/_/g, "/");
+
+        const rawData = atob(base64);
+        const outputArray = new Uint8Array(rawData.length);
+
+        for (let i = 0; i < rawData.length; ++i) {
+          outputArray[i] = rawData.charCodeAt(i);
+        }
+
+        return outputArray;
+      }
+    </script>
+  </body>
+</html>

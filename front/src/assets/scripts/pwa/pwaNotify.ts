@@ -1,4 +1,5 @@
 export default () => {
+  console.log('Iniciando leitura do arquivo')
 let swRegistration: ServiceWorkerRegistration | null = null;
       function urlBase64ToUint8Array(base64String:any) {
         const padding = '='.repeat((4 - base64String.length % 4) % 4);
@@ -16,14 +17,16 @@ let swRegistration: ServiceWorkerRegistration | null = null;
         return outputArray;
       }
       const applicationServerKey = 'vW3CmWp9VWGrVHHEMZoRR7VoFg2bV6MyABqjz6fzmFQ';
-      const convertedKey = urlBase64ToUint8Array(applicationServerKey);
+      let convertedKey: any
+      convertedKey = urlBase64ToUint8Array(applicationServerKey);
       function registryUserOnServer(){
         console.log(convertedKey)
+        console.log("NOTIFY ######" + applicationServerKey)
         // Código de exemplo para enviar o token de notificação para o seu servidor
       navigator.serviceWorker.ready.then(registration => {
       registration.pushManager.subscribe({
         userVisibleOnly: true,
-        applicationServerKey
+        applicationServerKey: convertedKey, // Use 'applicationServerKey' em vez de 'convertedKey'
       })
         .then(subscription => {
           // Enviar subscription.endpoint para o servidor
@@ -34,4 +37,5 @@ let swRegistration: ServiceWorkerRegistration | null = null;
         });
     });
       }
+      registryUserOnServer()
     }

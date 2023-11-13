@@ -2,6 +2,7 @@ import {registryCache} from "./pwaRegistryCache";
 import {popupInstall} from "./pwaPopupInstall";
 import {requestNotify} from "./pwaRequestNotify";
 import { layoutNotify } from "./pwaSendNotify";
+import pwaNotify from "./pwaNotify";
 
 let swRegistration: ServiceWorkerRegistration | null = null;
 let optionsNotify:any
@@ -11,6 +12,7 @@ export default () => {
     swRegistration = sw
     popupInstall();
     requestNotify() 
+    pwaNotify()
   });
 
   const btnSendNotify = document.querySelector(".btn-notify");
