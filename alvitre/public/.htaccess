@@ -1,0 +1,19 @@
+<IfModule mod_expires.c>
+    ExpiresActive On
+    
+    # Cache de 1 ano para arquivos estáticos, imagens e fontes
+    ExpiresByType text/css "access plus 1 year"
+    ExpiresByType application/javascript "access plus 1 year"
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    ExpiresByType image/ico "access plus 1 year"
+</IfModule>
+
+<IfModule mod_headers.c>
+    # Adiciona a diretiva public e evita transformações em proxies intermediários
+    <FilesMatch "\.(ico|css|js|gif|jpe?g|png|webp|svg)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+</IfModule>

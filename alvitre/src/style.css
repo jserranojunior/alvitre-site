@@ -1,0 +1,28 @@
+@import "tailwindcss";
+@plugin "daisyui" {
+  themes: light, black --default;
+}
+
+
+
+.welcome {
+    background-image: url('/static/wallpapers/jpg/welcome.jpg');
+    background-image: -webkit-image-set(url('/static/wallpapers/webp/welcome.webp') 1x)
+  }
+  
+  .dev {
+    background-image: url('/static/wallpapers/jpg/dev.jpg');
+    background-image: -webkit-image-set(url('/static/wallpapers/webp/dev.webp') 1x)
+  }
+   
+
+.responsive {
+  @apply px-0 xl:px-20 2xl:px-60;
+}
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
